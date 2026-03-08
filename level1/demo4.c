@@ -39,7 +39,7 @@ void searchByDestination(int n,Flight *arr,char *d){
     for(int i=0;i<n;i++){
         int result=strcmp(d,arr[i].destination);
         if(result==0){
-            printf("Flight number %s is available to your destination\n",arr[i].destination);
+            printf("Flight number %s is available to your destination\n",arr[i].flight_number);
             return;
         }
     }
