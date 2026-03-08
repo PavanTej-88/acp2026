@@ -19,13 +19,13 @@ int main(){
     output(l,arr);
     return 0;
 }
-void input(int x,*a){
+void input(int x,float *a){
     for(int i=0;i<n;i++){
         printf("Enter element %d: \n");
         scanf("%f",&a[i]);
     }
 }
-int find_max_index(int x,*a){
+int find_max_index(int x,float *a){
     int max_index=0;
     for(int i=1;i<n;i++){
         if(a[i]>a[max_index]){
@@ -34,6 +34,6 @@ int find_max_index(int x,*a){
     }
     return max_index;
 }
-void output(int x,*a){
+void output(int x,float *a){
     printf("Maximum value in the array is %.2f at index %d",a[x],x);
 }
