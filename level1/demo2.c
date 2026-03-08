@@ -18,7 +18,7 @@ typedef struct{
 	float area;
 }Rectangle;
 Rectangle input(void);
-float claculate_area(Rectangle r);
+float calculate_area(Rectangle r);
 void compare_areas(Rectangle x,Rectangle y,Rectangle z);
 int main(){
 	Rectangle r1,r2,r3;
@@ -32,17 +32,14 @@ int main(){
 	return 0;
 }
 Rectangle input(void){
-	typedef struct{
-		char name[50];
-		float length,width,area;
-	}rect;
+	Rectangle r4;
 	printf("Enter name of rectangle: ");
-	scanf("%s",rect.name);
+	scanf("%s",r4.name);
 	printf("Enter length of rectangle: ");
-	scanf("%f",rect.length);
+	scanf("%f",r4.length);
 	printf("Enter width of rectangle: ");
-	scanf("%f",rect.width);
-	return rect;
+	scanf("%f",r4.width);
+	return r4;
 }
 float calculate_area(Rectangle r){
 	r.area=r.length*r.width;
