@@ -34,11 +34,11 @@ int main(){
 Rectangle input(void){
 	Rectangle r4;
 	printf("Enter name of rectangle: ");
-	scanf("%s",r4.name);
+	scanf("%s",&r4.name);
 	printf("Enter length of rectangle: ");
-	scanf("%f",r4.length);
+	scanf("%f",&r4.length);
 	printf("Enter width of rectangle: ");
-	scanf("%f",r4.width);
+	scanf("%f",&r4.width);
 	return r4;
 }
 float calculate_area(Rectangle r){
