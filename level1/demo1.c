@@ -6,9 +6,9 @@ void input(int n, float arr[n]);
 int find_max_index(int n, float arr[n]);
 void output(float arr[ ], int max_index);*/
 #include<stdio.h>
-void input(int,float);
-int find_max_index(int,float);
-void output(int,float);
+void input(int,float *);
+int find_max_index(int,float *);
+void output(int,float *);
 int main(){
     int n,l;
     printf("Enter number of values: ");
