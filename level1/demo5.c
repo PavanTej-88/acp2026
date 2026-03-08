@@ -5,6 +5,9 @@ void print_array(int n, int arr[]);
 void swap_array(int n, int a[n], int b[n]);*/
 
 #include<stdio.h>
+void read_array(int,int * );
+void print_array(int,int * );
+void swap_array(int,int *,int * );
 int main(){
 
     int n;
