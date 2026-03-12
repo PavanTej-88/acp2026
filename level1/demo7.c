@@ -9,6 +9,9 @@ void output(int result);
 */
 
 #include<stdio.h>
+void inputStrings(char *,char * );
+int compareStrings(char *,char * );
+void output(int);
 int main(){
     char str1[100],str2[100];
     int n;
@@ -25,7 +28,7 @@ void inputStrings(char *a,char *b){
 }
 int compareStrings(char *a,char *b){
     int i=0;
-    while(a[i]!=\0 && b[i]!=\0){
+    while(a[i]!="\0" && b[i]!="\0"){
         if(a[i]<b[i]){
             return -1;
         }
@@ -38,11 +41,11 @@ int compareStrings(char *a,char *b){
         i++;
     }
 }
-void outputStrings(int x){
-    if(n>0){
+void output(int x){
+    if(x>0){
         printf("String 1 is larger\n");
     }
-    else if(n<0){
+    else if(x<0){
         printf("String 2 is larger\n");
     }
     else{
