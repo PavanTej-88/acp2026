@@ -11,17 +11,17 @@ void output(float max, float min);*/
 void inputTemperatures(int,float * );
 float findHighest(int,float * );
 float findLowest(int,float * );
-void output(int,float * );
+void output(float,float);
 int main(){
     float d[7];
     inputTemperatures(7,d);
-    float h=float findHighest(7,d);
-    float l=float findLowest(7,d);
+    float h=findHighest(7,d);
+    float l=findLowest(7,d);
     output(h,l);
 }
 void inputTemperature(int n,float *x){
     for(int i=0;i<7;i++){
-        printf("Enter temperature for day %d: "i+1);
+        printf("Enter temperature for day %d: ",i+1);
         scanf("%f",&x[i]);
     }
 }
@@ -37,7 +37,7 @@ float findHighest(int n,float *x){
 float findLowest(int n,float *x){
     int low=0;
     for(int i=0;i<7;i++){
-        if(x[i]<x[high]){
+        if(x[i]<x[low]){
             low=i;
         }
     }
