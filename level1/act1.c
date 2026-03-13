@@ -15,9 +15,7 @@ void output(float,float);
 int main(){
     float d[7];
     inputTemperatures(7,d);
-    float h=findHighest(7,d);
-    float l=findLowest(7,d);
-    output(h,l);
+    output(findHighest(7,d),findLowest(7,d));
 }
 void inputTemperatures(int n,float *x){
     for(int i=0;i<7;i++){
@@ -27,7 +25,7 @@ void inputTemperatures(int n,float *x){
 }
 float findHighest(int n,float *x){
     int high=0;
-    for(int i=0;i<7;i++){
+    for(int i=0;i<n;i++){
         if(x[i]>x[high]){
             high=i;
         }
@@ -36,7 +34,7 @@ float findHighest(int n,float *x){
 }
 float findLowest(int n,float *x){
     int low=0;
-    for(int i=0;i<7;i++){
+    for(int i=0;i<n;i++){
         if(x[i]<x[low]){
             low=i;
         }
