@@ -19,7 +19,7 @@ int main(){
     float l=findLowest(7,d);
     output(h,l);
 }
-void inputTemperature(int n,float *x){
+void inputTemperatures(int n,float *x){
     for(int i=0;i<7;i++){
         printf("Enter temperature for day %d: ",i+1);
         scanf("%f",&x[i]);
