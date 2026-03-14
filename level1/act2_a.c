@@ -16,6 +16,9 @@ typedef struct{
     int units;
     float rate,total_bill;
 }ElectricityBill;
+ElectricityBill input(void);
+ElectricityBill calculate_bill(ElectricityBill bill);
+void output(ElectricityBill bill);
 int main(){
     ElectricityBill eb;
     eb=input();
