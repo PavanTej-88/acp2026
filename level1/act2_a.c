@@ -44,7 +44,14 @@ ElectricityBill calculate_bill(ElectricityBill x){
     return x;
 }
 void output(ElectricityBill x){
-    printf("Total electricity bill = %.2f\n",x.total_bill);
+    if(x.units>100){
+        printf("High consumption alert!,%d units used, Extra charges applied.\n",x.units);
+        printf("Total electricity bill = %.2f\n",x.total_bill);
+    }
+    else{
+        printf("Total electricity bill = %.2f\n",x.total_bill);
+    }
+
 }
 
     
