@@ -1,0 +1,192 @@
+Script started on 2026-03-17 14:58:27+05:30 [TERM="xterm-256color" TTY="/dev/pts/6" COLUMNS="154" LINES="18"]
+[?2004h]0;pavantej@pavantej-VivoBook-ASUSLaptop-X509FA-X509FA: ~/acp2026/level1[01;32mpavantej@pavantej-VivoBook-ASUSLaptop-X509FA-X509FA[00m:[01;34m~/acp2026/level1[00m$ gcc -g demo2.c -o dd[Kemo2
+[?2004l[?2004h]0;pavantej@pavantej-VivoBook-ASUSLaptop-X509FA-X509FA: ~/acp2026/level1[01;32mpavantej@pavantej-VivoBook-ASUSLaptop-X509FA-X509FA[00m:[01;34m~/acp2026/level1[00m$ gdb demo2
+[?2004l[35;1mGNU gdb (Ubuntu 15.0.50.20240403-0ubuntu1) 15.0.50.20240403-git[m
+Copyright (C) 2024 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <[32mhttp://gnu.org/licenses/gpl.html[m>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+[32m<https://www.gnu.org/software/gdb/bugs/>[m.
+Find the GDB manual and other documentation resources online at:
+    <[32mhttp://www.gnu.org/software/gdb/documentation/[m>.
+
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from [32mdemo2[m...
+[?2004h(gdb) b main
+[?2004lBreakpoint 1 at [34m0x11b9[m: file [32mdemo2.c[m, line 23.
+[?2004h(gdb) r
+[?2004lStarting program: [32m/home/pavantej/acp2026/level1/demo2[m 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "[32m/lib/x86_64-linux-gnu/libthread_db.so.1[m".
+
+Breakpoint 1, [33mmain[m () at [32mdemo2.c[m:23
+23	[32mint[m [01mmain[m[31m()[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l25		r1[31m=[m[01minput[m[31m();[m
+[?2004h[?2004l[?2004h(gdb) s
+[?2004l[33minput[m () at [32mdemo2.c[m:34
+34	Rectangle [01minput[m[31m([m[32mvoid[m[31m)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l36		[01mprintf[m[31m([m[31m"Enter name of rectangle: "[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l37		[01mscanf[m[31m([m[31m"%s"[m[31m,[mr4[31m.[mname[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lEnter name of rectangle: r1
+38		[01mprintf[m[31m([m[31m"Enter length of rectangle: "[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) p r4.name
+[?2004l[36m$1[m = "r1\000\377\377\177\000\000\214\336\375\367\377\177\000\000\001\000\000\000\000\000\000\000\006\000\000\000\001\000\000\000\216\000\000\000\003\000\000\000\001\000\000\000\000\000\000\001\000"
+[?2004h(gdb) n
+[?2004l39		[01mscanf[m[31m([m[31m"%f"[m[31m,&[mr4[31m.[mlength[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lEnter length of rectangle: 23 3.6
+40		[01mprintf[m[31m([m[31m"Enter width of rectangle: "[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) p r3[K4.length
+[?2004l[36m$2[m = 23.6000004
+[?2004h(gdb) n
+[?2004l41		[01mscanf[m[31m([m[31m"%f"[m[31m,&[mr4[31m.[mwidth[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lEnter width of rectangle: 2.6
+42		[01;34mreturn[m r4[31m;[m
+[?2004h[?2004l[?2004h(gdb) p r4.width
+[?2004l[36m$3[m = 2.5999999
+[?2004h(gdb) n
+[?2004l43	[31m}[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l[33mmain[m () at [32mdemo2.c[m:26
+26		r2[31m=[m[01minput[m[31m();[m
+[?2004h[?2004l[?2004h(gdb) s
+[?2004l[33minput[m () at [32mdemo2.c[m:34
+34	Rectangle [01minput[m[31m([m[32mvoid[m[31m)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l36		[01mprintf[m[31m([m[31m"Enter name of rectangle: "[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l37		[01mscanf[m[31m([m[31m"%s"[m[31m,[mr4[31m.[mname[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lEnter name of rectangle: r2
+38		[01mprintf[m[31m([m[31m"Enter length of rectangle: "[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l39		[01mscanf[m[31m([m[31m"%f"[m[31m,&[mr4[31m.[mlength[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lEnter length of rectangle: 4.5
+40		[01mprintf[m[31m([m[31m"Enter width of rectangle: "[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) p r4.length
+[?2004l[36m$4[m = 4.5
+[?2004h(gdb) n
+[?2004l41		[01mscanf[m[31m([m[31m"%f"[m[31m,&[mr4[31m.[mwidth[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lEnter width of rectangle: 2.8
+42		[01;34mreturn[m r4[31m;[m
+[?2004h[?2004l[?2004h(gdb) p r4.width
+[?2004l[36m$5[m = 2.79999995
+[?2004h(gdb) n
+[?2004l43	[31m}[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l[33mmain[m () at [32mdemo2.c[m:27
+27		r3[31m=[m[01minput[m[31m();[m
+[?2004h[?2004l[?2004h(gdb) s
+[?2004l[33minput[m () at [32mdemo2.c[m:34
+34	Rectangle [01minput[m[31m([m[32mvoid[m[31m)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l36		[01mprintf[m[31m([m[31m"Enter name of rectangle: "[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l37		[01mscanf[m[31m([m[31m"%s"[m[31m,[mr4[31m.[mname[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lEnter name of rectangle: r3
+38		[01mprintf[m[31m([m[31m"Enter length of rectangle: "[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) p r4.name
+[?2004l[36m$6[m = "r3\000\377\377\177\000\000\214\336\375\367\377\177\000\000\001\000\000\000\000\000\000\000\006\000\000\000\001\000\000\000\216\000\000\000\003\000\000\000\001\000\000\000\000\000\000\001\000"
+[?2004h(gdb) n
+[?2004l39		[01mscanf[m[31m([m[31m"%f"[m[31m,&[mr4[31m.[mlength[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lEnter length of rectangle: 148.6
+40		[01mprintf[m[31m([m[31m"Enter width of rectangle: "[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) p r4.lr[Kength
+[?2004l[36m$7[m = 148.600006
+[?2004h(gdb) n
+[?2004l41		[01mscanf[m[31m([m[31m"%f"[m[31m,&[mr4[31m.[mwidth[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lEnter width of rectangle: 4.8 0
+42		[01;34mreturn[m r4[31m;[m
+[?2004h[?2004l[?2004h(gdb) p r4.width
+[?2004l[36m$8[m = 4
+[?2004h(gdb) n
+[?2004l43	[31m}[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l[33mmain[m () at [32mdemo2.c[m:28
+28		r1[31m.[marea[31m=[m[01mcalculate_area[m[31m([mr1[31m);[m
+[?2004h[?2004l[?2004h(gdb) s
+[?2004l[33mcalculate_area[m ([36mr[m=...) at [32mdemo2.c[m:45
+45		r[31m.[marea[31m=[mr[31m.[mlength[31m*[mr[31m.[mwidth[31m;[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l46		[01;34mreturn[m r[31m.[marea[31m;[m
+[?2004h[?2004l[?2004h(gdb) p r.area
+[?2004l[36m$9[m = 61.3600006
+[?2004h(gdb) n
+[?2004l47	[31m}[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l[33mmain[m () at [32mdemo2.c[m:29
+29		r2[31m.[marea[31m=[m[01mcalculate_area[m[31m([mr2[31m);[m
+[?2004h[?2004l[?2004h(gdb) s
+[?2004l[33mcalculate_area[m ([36mr[m=...) at [32mdemo2.c[m:45
+45		r[31m.[marea[31m=[mr[31m.[mlength[31m*[mr[31m.[mwidth[31m;[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l46		[01;34mreturn[m r[31m.[marea[31m;[m
+[?2004h[?2004l[?2004h(gdb) nsnp r.area
+[?2004l[36m$10[m = 12.5999994
+[?2004h(gdb) n
+[?2004l47	[31m}[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l[33mmain[m () at [32mdemo2.c[m:30
+30		r3[31m.[marea[31m=[m[01mcalculate_area[m[31m([mr3[31m);[m
+[?2004h[?2004l[?2004h(gdb) s
+[?2004l[33mcalculate_area[m ([36mr[m=...) at [32mdemo2.c[m:45
+45		r[31m.[marea[31m=[mr[31m.[mlength[31m*[mr[31m.[mwidth[31m;[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l46		[01;34mreturn[m r[31m.[marea[31m;[m
+[?2004h[?2004l[?2004h(gdb) nsnp r.area
+[?2004l[36m$11[m = 594.400024
+[?2004h(gdb) n
+[?2004l47	[31m}[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l[33mmain[m () at [32mdemo2.c[m:31
+31		[01mcompare_areas[m[31m([mr1[31m,[mr2[31m,[mr3[31m);[m
+[?2004h[?2004l[?2004h(gdb) s
+[?2004l[33mcompare_areas[m ([36mx[m=..., [36my[m=..., [36mz[m=...) at [32mdemo2.c[m:49
+49		[01;34mif[m[31m(([mx[31m.[marea[31m>[my[31m.[marea[31m)&&([mx[31m.[marea[31m>[mz[31m.[marea[31m))[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) p x.area
+[?2004l[36m$12[m = 61.3600006
+[?2004h(gdb) p y.area
+[?2004l[36m$13[m = 12.5999994
+[?2004h(gdb) p z.area
+[?2004l[36m$14[m = 594.400024
+[?2004h(gdb) n
+[?2004l52		[01;34melse[m [01;34mif[m[31m(([my[31m.[marea[31m>[mx[31m.[marea[31m)&&([my[31m.[marea[31m>[mz[31m.[marea[31m))[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l55		[01;34melse[m [01;34mif[m[31m(([mz[31m.[marea[31m>[mx[31m.[marea[31m)&&([mz[31m.[marea[31m>[my[31m.[marea[31m))[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l56			[01mprintf[m[31m([m[31m"%s has largest area = %.2f[m[35m\n[m[31m"[m[31m,[mz[31m.[mname[31m,[mz[31m.[marea[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lr3 has largest area = 594.40
+[33mmain[m () at [32mdemo2.c[m:32
+32		[01;34mreturn[m [35m0[m[31m;[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l33	[31m}[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l[33m__libc_start_call_main[m ([36mmain=main@entry[m=0x5555555551a9 <main>, [36margc=argc@entry[m=1, [36margv=argv@entry[m=0x7fffffffd998)
+    at [32m../sysdeps/nptl/libc_start_call_main.h[m:74
+warning: 74	[32m../sysdeps/nptl/libc_start_call_main.h[m: No such file or directory
+[?2004h[?2004l[?2004h(gdb) q
+[?2004l[?2004hA debugging session is active.
+
+	Inferior 1 [process 43405] will be killed.
+
+Quit anyway? (y or n) y
+[?2004l[?2004h]0;pavantej@pavantej-VivoBook-ASUSLaptop-X509FA-X509FA: ~/acp2026/level1[01;32mpavantej@pavantej-VivoBook-ASUSLaptop-X509FA-X509FA[00m:[01;34m~/acp2026/level1[00m$ exit
+[?2004lexit
+
+Script done on 2026-03-17 15:05:00+05:30 [COMMAND_EXIT_CODE="0"]
