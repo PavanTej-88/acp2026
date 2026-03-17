@@ -1,0 +1,70 @@
+Script started on 2026-03-17 10:06:02+05:30 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="182" LINES="18"]
+[?2004h]0;pavantej@pavantej-VivoBook-ASUSLaptop-X509FA-X509FA: ~/acp2026/level1[01;32mpavantej@pavantej-VivoBook-ASUSLaptop-X509FA-X509FA[00m:[01;34m~/acp2026/level1[00m$ gcc -g demo1.c -o dmeo1+++[K[K[K[K[K[K[Kemo1
+[?2004l[?2004h]0;pavantej@pavantej-VivoBook-ASUSLaptop-X509FA-X509FA: ~/acp2026/level1[01;32mpavantej@pavantej-VivoBook-ASUSLaptop-X509FA-X509FA[00m:[01;34m~/acp2026/level1[00m$ gdb demo1
+[?2004l[35;1mGNU gdb (Ubuntu 15.0.50.20240403-0ubuntu1) 15.0.50.20240403-git[m
+Copyright (C) 2024 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <[32mhttp://gnu.org/licenses/gpl.html[m>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+[32m<https://www.gnu.org/software/gdb/bugs/>[m.
+Find the GDB manual and other documentation resources online at:
+    <[32mhttp://www.gnu.org/software/gdb/documentation/[m>.
+
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from [32mdemo1[m...
+[?2004h(gdb) b amin[K[K[K[Kmain
+[?2004lBreakpoint 1 at [34m0x1196[m: file [32mdemo1.c[m, line 12.
+[?2004h(gdb) r
+[?2004lStarting program: [32m/home/pavantej/acp2026/level1/demo1[m 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "[32m/lib/x86_64-linux-gnu/libthread_db.so.1[m".
+
+Breakpoint 1, [33mmain[m () at [32mdemo1.c[m:12
+12	[32mint[m [01mmain[m[31m()[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l14	    [01mprintf[m[31m([m[31m"Enter number of values: "[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l15	    [01mscanf[m[31m([m[31m"%d"[m[31m,&[mn[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lEnter number of values: 3
+16	    [32mfloat[m arr[31m[[mn[31m];[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l17	    [01minput[m[31m([mn[31m,[marr[31m);[m
+[?2004h[?2004l[?2004h(gdb) s
+[?2004l[33minput[m ([36mx[m=3, [36ma[m=0x7fffffffd830) at [32mdemo1.c[m:23
+23	    [01;34mfor[m[31m([m[32mint[m i[31m=[m[35m0[m[31m;[mi[31m<[mx[31m;[mi[31m++)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l24	        [01mprintf[m[31m([m[31m"Enter element %d: "[m[31m,[mi[31m+[m[35m1[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l25	        [01mscanf[m[31m([m[31m"%f"[m[31m,&[ma[31m[[mi[31m]);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lEnter element 1: 6
+23	    [01;34mfor[m[31m([m[32mint[m i[31m=[m[35m0[m[31m;[mi[31m<[mx[31m;[mi[31m++)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) p arr[0]
+[?2004lNo symbol "arr" in current context.
+[?2004h(gdb) p a[0]
+[?2004l[36m$1[m = 6
+[?2004h(gdb) n
+[?2004l24	        [01mprintf[m[31m([m[31m"Enter element %d: "[m[31m,[mi[31m+[m[35m1[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l25	        [01mscanf[m[31m([m[31m"%f"[m[31m,&[ma[31m[[mi[31m]);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lEnter element 2: 5
+23	    [01;34mfor[m[31m([m[32mint[m i[31m=[m[35m0[m[31m;[mi[31m<[mx[31m;[mi[31m++)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) p a[1]
+[?2004l[36m$2[m = 5
+[?2004h(gdb) n
+[?2004l24	        [01mprintf[m[31m([m[31m"Enter element %d: "[m[31m,[mi[31m+[m[35m1[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l25	        [01mscanf[m[31m([m[31m"%f"[m[31m,&[ma[31m[[mi[31m]);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lEnter element 3: 7.2
+23	    [01;34mfor[m[31m([m[32mint[m i[31m=[m[35m0[m[31m;[mi[31m<[mx[31m;[mi[31m++)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) p a[2]
+[?2004l[36m$3[m = 7.19999981
+[?2004h(gdb) 
