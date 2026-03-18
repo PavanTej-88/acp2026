@@ -1,0 +1,204 @@
+Script started on 2026-03-18 14:29:17+05:30 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="154" LINES="18"]
+[?2004h]0;pavantej@pavantej-VivoBook-ASUSLaptop-X509FA-X509FA: ~/acp2026/level1[01;32mpavantej@pavantej-VivoBook-ASUSLaptop-X509FA-X509FA[00m:[01;34m~/acp2026/level1[00m$ gcc -g demo4.c -o demo4
+[?2004l[?2004h]0;pavantej@pavantej-VivoBook-ASUSLaptop-X509FA-X509FA: ~/acp2026/level1[01;32mpavantej@pavantej-VivoBook-ASUSLaptop-X509FA-X509FA[00m:[01;34m~/acp2026/level1[00m$ gdb dm[Kemo4
+[?2004l[35;1mGNU gdb (Ubuntu 15.0.50.20240403-0ubuntu1) 15.0.50.20240403-git[m
+Copyright (C) 2024 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <[32mhttp://gnu.org/licenses/gpl.html[m>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+[32m<https://www.gnu.org/software/gdb/bugs/>[m.
+Find the GDB manual and other documentation resources online at:
+    <[32mhttp://www.gnu.org/software/gdb/documentation/[m>.
+
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from [32mdemo4[m...
+[?2004h(gdb) b main
+[?2004lBreakpoint 1 at [34m0x11d6[m: file [32mdemo4.c[m, line 17.
+[?2004h(gdb) r
+[?2004lStarting program: [32m/home/pavantej/acp2026/level1/demo4[m 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "[32m/lib/x86_64-linux-gnu/libthread_db.so.1[m".
+
+Breakpoint 1, [33mmain[m () at [32mdemo4.c[m:17
+17	[32mint[m [01mmain[m[31m()[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l18	    [32mint[m n[31m=[m[35m4[m[31m;[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l20	    Flight f[31m[[mn[31m];[m
+[?2004h[?2004l[?2004h(gdb) p n
+[?2004l[36m$1[m = 4
+[?2004h(gdb) n
+[?2004l21	    [01mreadFlights[m[31m([mn[31m,[mf[31m);[m
+[?2004h[?2004l[?2004h(gdb) s
+[?2004l[33mreadFlights[m ([36mn[m=4, [36marr[m=0x7fffffffd730) at [32mdemo4.c[m:28
+28	    [01;34mfor[m[31m([m[32mint[m i[31m=[m[35m0[m[31m;[mi[31m<[mn[31m;[mi[31m++)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l29	        [01mprintf[m[31m([m[31m"Enter details of flight %d[m[35m\n[m[31m"[m[31m,[mi[31m+[m[35m1[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lEnter details of flight 1
+30	        [01mprintf[m[31m([m[31m"Enter flight number: "[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l31	        [01mscanf[m[31m([m[31m"%s"[m[31m,[marr[31m[[mi[31m].[mflight_number[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lEnter flight number: 1
+32	        [01mprintf[m[31m([m[31m"Enter flight destination: "[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) p arr[0].flight_number
+[?2004l[36m$2[m = "1\000\000\000\000\000\000\000\000"
+[?2004h(gdb) n
+[?2004l33	        [01mscanf[m[31m([m[31m"%s"[m[31m,[marr[31m[[mi[31m].[mdestination[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lEnter flight destination: a india
+34	        [01mprintf[m[31m([m[31m"Enter number of available seats: "[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) p[Knp arr[0].flight_number[C[K[K[K[K[K[K[K[K[K[K[K[K[Kdestination
+[?2004l[36m$3[m = "india\000\000\000\000\000\000\000\000\000~\327\377\377\377\177\000\000\260\327\377\377\377\177\000\000\214\336\375\367\377\177\000\000\001\000\000\000\000\000\000\000\006\000\000"
+[?2004h(gdb) n
+[?2004l35	        [01mscanf[m[31m([m[31m"%d"[m[31m,&[marr[31m[[mi[31m].[mavailable_seats[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lEnter number of available seats: 3
+28	    [01;34mfor[m[31m([m[32mint[m i[31m=[m[35m0[m[31m;[mi[31m<[mn[31m;[mi[31m++)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) np arr[0].destination[K[K[K[K[K[K[K[K[K[K[K[K.availabel[K[Kle_seats
+[?2004l[36m$4[m = 3
+[?2004h(gdb) n
+[?2004l29	        [01mprintf[m[31m([m[31m"Enter details of flight %d[m[35m\n[m[31m"[m[31m,[mi[31m+[m[35m1[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) 
+[?2004lEnter details of flight 2
+30	        [01mprintf[m[31m([m[31m"Enter flight number: "[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l31	        [01mscanf[m[31m([m[31m"%s"[m[31m,[marr[31m[[mi[31m].[mflight_number[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lEnter flight number: 2
+32	        [01mprintf[m[31m([m[31m"Enter flight destination: "[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) np arr[0].available_seats[C[C[C[C[C[Cn[Kp arr[0].destination[C[C[C[C[C[Cn[Kp arr[0].flight_number[1P].flight_number[C[C[C[C[C[C[C[C[C[C[C[C1].flight_number[C[C[C[C[C[C[C[C[C[C[C[C[C
+[?2004l[36m$5[m = "2\000\000\000\003\000\000\000\001"
+[?2004h(gdb) n
+[?2004l33	        [01mscanf[m[31m([m[31m"%s"[m[31m,[marr[31m[[mi[31m].[mdestination[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lEnter flight destination: america
+34	        [01mprintf[m[31m([m[31m"Enter number of available seats: "[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) np arr[1].flight_number[C[C[C[C[C[Cn[Kp arr[0].available_seats[C[C[C[C[C[Cn[Kp arr[0].destination[C[C[C[C[C[Cn[Kp arr[0].destination[1P].destination1].destination
+[?2004l[36m$6[m = "america\000\020\000\000\000\000\000@\000\000\000\000\000\000\000\371\"\000\000\000\000\000\000\002\000\000\000\000\000\000\000)\003\214\000\000\000\000\000h\330\377\377"
+[?2004h(gdb) n
+[?2004l35	        [01mscanf[m[31m([m[31m"%d"[m[31m,&[marr[31m[[mi[31m].[mavailable_seats[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lEnter number of available seats: 5
+28	    [01;34mfor[m[31m([m[32mint[m i[31m=[m[35m0[m[31m;[mi[31m<[mn[31m;[mi[31m++)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) np arr[1].destination[C[C[C[C[C[Cn[Kp arr[1].flight_number[C[C[C[C[C[Cn[Kp arr[0].available_seats[C[C[C[C[C[Cn[Kp arr[0].available_seats[C[1P].available_seats[C[C[C[C[C[C[C[C[C[C[C[C1].available_seats[C[C[C[C[C[C[C[C[C[C[C[C[C
+[?2004l[36m$7[m = 5
+[?2004h(gdb) n
+[?2004l29	        [01mprintf[m[31m([m[31m"Enter details of flight %d[m[35m\n[m[31m"[m[31m,[mi[31m+[m[35m1[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lEnter details of flight 3
+30	        [01mprintf[m[31m([m[31m"Enter flight number: "[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l31	        [01mscanf[m[31m([m[31m"%s"[m[31m,[marr[31m[[mi[31m].[mflight_number[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lEnter flight number: 3
+32	        [01mprintf[m[31m([m[31m"Enter flight destination: "[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) np arr[1].available_seats[C[C[C[C[C[Cn[Kp arr[1].destination[C[C[C[C[C[Cn[Kp arr[1].flight_number[C[C[C[C[C[Cn[Kp arr[1].flight_number[1P].flight_number[C[C[C[C[C[C[C[C[C[C[C[C2].flight_number[C[C[C[C[C[C[C[C[C[C[C[C[C
+[?2004l[36m$8[m = "3\000\377\377\377\177\000\000\333", <incomplete sequence \355>
+[?2004h(gdb) n
+[?2004l33	        [01mscanf[m[31m([m[31m"%s"[m[31m,[marr[31m[[mi[31m].[mdestination[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lEnter flight destination: africa
+34	        [01mprintf[m[31m([m[31m"Enter number of available seats: "[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) np arr[2].flight_number[C[C[C[C[C[Cn[Kp arr[1].available_seats[C[C[C[C[C[Cn[Kp arr[1].destination[1P].destination2].destination
+[?2004l[36m$9[m = "africa\000\000\000\000\000\000\000\000@\000\000\000\000\000\000\000\000\000@\000\000\000\000\000\020\000\000\000\000\000\000\000\377\377\377\377\377\377\377\377@\000\000"
+[?2004h(gdb) n
+[?2004l35	        [01mscanf[m[31m([m[31m"%d"[m[31m,&[marr[31m[[mi[31m].[mavailable_seats[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lEnter number of available seats: 50
+28	    [01;34mfor[m[31m([m[32mint[m i[31m=[m[35m0[m[31m;[mi[31m<[mn[31m;[mi[31m++)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) np arr[2].destination[C[C[C[C[C[Cn[Kp arr[2].flight_number[C[C[C[C[C[Cn[Kp arr[1].available_seats[1P].available_seats[C[C[C[C[C[C[C[C[C[C[C[C2].available_seats[C[C[C[C[C[C[C[C[C[C[C[C[C
+[?2004l[36m$10[m = 50
+[?2004h(gdb) n
+[?2004l29	        [01mprintf[m[31m([m[31m"Enter details of flight %d[m[35m\n[m[31m"[m[31m,[mi[31m+[m[35m1[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lEnter details of flight 4
+30	        [01mprintf[m[31m([m[31m"Enter flight number: "[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l31	        [01mscanf[m[31m([m[31m"%s"[m[31m,[marr[31m[[mi[31m].[mflight_number[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lEnter flight number: 4
+32	        [01mprintf[m[31m([m[31m"Enter flight destination: "[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) np arr[2].available_seats[C[C[C[C[C[Cn[Kp arr[2].destination[C[C[C[C[C[Cn[Kp arr[2].flight_number[C[C[C[C[C[Cn[Kp arr[2].flight_number[C[1P].flight_number[C[C[C[C[C[C[C[C[C[C[C[C3].flight_number[C[C[C[C[C[C[C[C[C[C[C[C[C
+[?2004l[36m$11[m = "4\000\000\000\000\000\000\000\000"
+[?2004h(gdb) n
+[?2004l33	        [01mscanf[m[31m([m[31m"%s"[m[31m,[marr[31m[[mi[31m].[mdestination[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lEnter flight destination: europe
+34	        [01mprintf[m[31m([m[31m"Enter number of available seats: "[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) np arr[3].flight_number[C[C[C[C[C[Cn[Kp arr[2].available_seats[C[C[C[C[C[Cn[Kp arr[2].destination[1P].destination3].destination
+[?2004l[36m$12[m = "europe\000\b\000\000\000\000\000\000\000\000 \000\000\000\000\000\000\200\000\000\000\000\000\000\000\000@\000\000\000\000\000\000\000@\000\000\000\000\000\000\000\004"
+[?2004h(gdb) n
+[?2004l35	        [01mscanf[m[31m([m[31m"%d"[m[31m,&[marr[31m[[mi[31m].[mavailable_seats[31m);[m
+[?2004h[?2004l[?2004h(gdb) 
+[?2004lEnter number of available seats: 34
+28	    [01;34mfor[m[31m([m[32mint[m i[31m=[m[35m0[m[31m;[mi[31m<[mn[31m;[mi[31m++)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) np arr[3].destination[C[C[C[C[C[Cn[Kp arr[3].flight_number[C[C[C[C[C[Cn[Kp arr[2].available_seats[C[C[C[C[C[Cn[Kp arr[2].available_seats[1P].available_seats[C[C[C[C[C[C[C[C[C[C[C[C3].available_seats[C[C[C[C[C[C[C[C[C[C[C[C[C
+[?2004l[36m$13[m = 34
+[?2004h(gdb) n
+[?2004l37	[31m}[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l[33mmain[m () at [32mdemo4.c[m:22
+22	    [01mprintf[m[31m([m[31m"Enter destination to search: "[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l23	    [01mscanf[m[31m([m[31m"%s"[m[31m,[mdest[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lEnter destination to search: india     ma  ameri c ica
+24	    [01msearchByDestination[m[31m([mn[31m,[mf[31m,[mdest[31m);[m
+[?2004h[?2004l[?2004h(gdb) np arr[3].available_seats[C[C[C[C[C[Cn[K[Kp s[Kdest
+[?2004l[36m$14[m = "america", '\000' <repeats 42 times>
+[?2004h(gdb) s
+[?2004l[33msearchByDestination[m ([36mn[m=4, [36marr[m=0x7fffffffd730, [36md[m=0x7fffffffd850 "america") at [32mdemo4.c[m:39
+39	    [01;34mfor[m[31m([m[32mint[m i[31m=[m[35m0[m[31m;[mi[31m<[mn[31m;[mi[31m++)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) p i
+[?2004l[36m$15[m = 0
+[?2004h(gdb) n
+[?2004l40	        [32mint[m result[31m=[m[01mstrcmp[m[31m([md[31m,[marr[31m[[mi[31m].[mdestination[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l41	        [01;34mif[m[31m([mresult[31m==[m[35m0[m[31m)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) p [K[Kp result
+[?2004l[36m$16[m = -8
+[?2004h(gdb) n
+[?2004l39	    [01;34mfor[m[31m([m[32mint[m i[31m=[m[35m0[m[31m;[mi[31m<[mn[31m;[mi[31m++)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) np result
+[?2004l[36m$17[m = '\000' <repeats 113 times>
+[?2004h(gdb) n
+[?2004l40	        [32mint[m result[31m=[m[01mstrcmp[m[31m([md[31m,[marr[31m[[mi[31m].[mdestination[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l41	        [01;34mif[m[31m([mresult[31m==[m[35m0[m[31m)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l42	            [01mprintf[m[31m([m[31m"Flight number %s is available to your destination[m[35m\n[m[31m"[m[31m,[marr[31m[[mi[31m].[mflight_number[31m);[m
+[?2004h[?2004l[?2004h(gdb) np result
+[?2004l[36m$18[m = 0
+[?2004h(gdb) n
+[?2004lFlight number 2 is available to your destination
+43	            [01;34mreturn[m[31m;[m
+[?2004h[?2004l[?2004h(gdb) np result[C[C[C[C[C[Cn[Kp result
+[?2004l[36m$19[m = 0
+[?2004h(gdb) n
+[?2004l47	[31m}[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l[33mmain[m () at [32mdemo4.c[m:25
+25	    [01;34mreturn[m [35m0[m[31m;[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l26	[31m}[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l[33m__libc_start_call_main[m ([36mmain=main@entry[m=0x5555555551c9 <main>, [36margc=argc@entry[m=1, [36margv=argv@entry[m=0x7fffffffd9c8)
+    at [32m../sysdeps/nptl/libc_start_call_main.h[m:74
+warning: 74	[32m../sysdeps/nptl/libc_start_call_main.h[m: No such file or directory
+[?2004h[?2004l[?2004h(gdb) q
+[?2004l[?2004hA debugging session is active.
+
+	Inferior 1 [process 8729] will be killed.
+
+Quit anyway? (y or n) y
+[?2004l[?2004h]0;pavantej@pavantej-VivoBook-ASUSLaptop-X509FA-X509FA: ~/acp2026/level1[01;32mpavantej@pavantej-VivoBook-ASUSLaptop-X509FA-X509FA[00m:[01;34m~/acp2026/level1[00m$ exit
+[?2004lexit
+
+Script done on 2026-03-18 14:38:28+05:30 [COMMAND_EXIT_CODE="0"]
