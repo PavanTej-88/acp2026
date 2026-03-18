@@ -1,0 +1,115 @@
+Script started on 2026-03-18 15:27:13+05:30 [TERM="xterm-256color" TTY="/dev/pts/3" COLUMNS="154" LINES="18"]
+[?2004h]0;pavantej@pavantej-VivoBook-ASUSLaptop-X509FA-X509FA: ~/acp2026/level1[01;32mpavantej@pavantej-VivoBook-ASUSLaptop-X509FA-X509FA[00m:[01;34m~/acp2026/level1[00m$ exitgdb demo7[14@cc -g demo7.c -o[C[C[C[C[C[C
+[?2004l[?2004h]0;pavantej@pavantej-VivoBook-ASUSLaptop-X509FA-X509FA: ~/acp2026/level1[01;32mpavantej@pavantej-VivoBook-ASUSLaptop-X509FA-X509FA[00m:[01;34m~/acp2026/level1[00m$ gdb deo[Kmo7
+[?2004l[35;1mGNU gdb (Ubuntu 15.0.50.20240403-0ubuntu1) 15.0.50.20240403-git[m
+Copyright (C) 2024 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <[32mhttp://gnu.org/licenses/gpl.html[m>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+[32m<https://www.gnu.org/software/gdb/bugs/>[m.
+Find the GDB manual and other documentation resources online at:
+    <[32mhttp://www.gnu.org/software/gdb/documentation/[m>.
+
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from [32mdemo7[m...
+[?2004h(gdb) b mi[Kain
+[?2004lBreakpoint 1 at [34m0x11b8[m: file [32mdemo7.c[m, line 15.
+[?2004h(gdb) r
+[?2004lStarting program: [32m/home/pavantej/acp2026/level1/demo7[m 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "[32m/lib/x86_64-linux-gnu/libthread_db.so.1[m".
+
+Breakpoint 1, [33mmain[m () at [32mdemo7.c[m:15
+15	[32mint[m [01mmain[m[31m()[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l18	    [01minputStrings[m[31m([mstr1[31m,[mstr2[31m);[m
+[?2004h[?2004l[?2004h(gdb) s
+[?2004l[33minputStrings[m ([36ma[m=0x7fffffffd7c0 "\004", [36mb[m=0x7fffffffd830 "") at [32mdemo7.c[m:24
+24	    [01mprintf[m[31m([m[31m"Enter string 1: "[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l25	    [01mscanf[m[31m([m[31m"%s"[m[31m,[ma[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lEnter string 1: helli o
+26	    [01mprintf[m[31m([m[31m"Enter string 2: "[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) p a
+[?2004l[36m$1[m = [34m0x7fffffffd7c0[m "hello"
+[?2004h(gdb) n
+[?2004l27	    [01mscanf[m[31m([m[31m"%s"[m[31m,[mb[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lEnter string 2: hi
+28	[31m}[m
+[?2004h[?2004l[?2004h(gdb) p b
+[?2004l[36m$2[m = [34m0x7fffffffd830[m "hi"
+[?2004h(gdb) n
+[?2004l[33mmain[m () at [32mdemo7.c[m:19
+19	    n[31m=[m[01mcompareStrings[m[31m([mstr1[31m,[mstr2[31m);[m
+[?2004h[?2004l[?2004h(gdb) s
+[?2004l[33mcompareStrings[m ([36ma[m=0x7fffffffd7c0 "hello", [36mb[m=0x7fffffffd830 "hi") at [32mdemo7.c[m:30
+30	    [32mint[m i[31m=[m[35m0[m[31m;[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l31	    [01;34mwhile[m[31m([ma[31m[[mi[31m]!=[m[31m'[m[35m\0[m[31m'[m [31m&&[m b[31m[[mi[31m]!=[m[31m'[m[35m\0[m[31m'[m[31m)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) p i
+[?2004l[36m$3[m = 0
+[?2004h(gdb) p ap[K[0]
+[?2004l[36m$4[m = 104 'h'
+[?2004h(gdb) p b[0]
+[?2004l[36m$5[m = 104 'h'
+[?2004h(gdb) n
+[?2004l32	        [01;34mif[m[31m([ma[31m[[mi[31m]<[mb[31m[[mi[31m])[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l35	        [01;34melse[m [01;34mif[m[31m([ma[31m[[mi[31m]>[mb[31m[[mi[31m])[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l38	        i[31m++;[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l31	    [01;34mwhile[m[31m([ma[31m[[mi[31m]!=[m[31m'[m[35m\0[m[31m'[m [31m&&[m b[31m[[mi[31m]!=[m[31m'[m[35m\0[m[31m'[m[31m)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) p i
+[?2004l[36m$6[m = 1
+[?2004h(gdb) p a[1]
+[?2004l[36m$7[m = 101 'e'
+[?2004h(gdb) p b[1]
+[?2004l[36m$8[m = 105 'i'
+[?2004h(gdb) n
+[?2004l32	        [01;34mif[m[31m([ma[31m[[mi[31m]<[mb[31m[[mi[31m])[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l33	            [01;34mreturn[m [31m-[m[35m1[m[31m;[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l49	[31m}[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l[33mmain[m () at [32mdemo7.c[m:20
+20	    [01moutput[m[31m([mn[31m);[m
+[?2004h[?2004l[?2004h(gdb) s
+[?2004l[33moutput[m ([36mx[m=-1) at [32mdemo7.c[m:51
+51	    [01;34mif[m[31m([mx[31m>[m[35m0[m[31m)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) 
+[?2004l54	    [01;34melse[m [01;34mif[m[31m([mx[31m<[m[35m0[m[31m)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) p x
+[?2004l[36m$9[m = -1
+[?2004h(gdb) n
+[?2004l55	        [01mprintf[m[31m([m[31m"String 2 is larger[m[35m\n[m[31m"[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lString 2 is larger
+60	[31m}[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l[33mmain[m () at [32mdemo7.c[m:21
+21	    [01;34mreturn[m [35m0[m[31m;[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l22	[31m}[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l[33m__libc_start_call_main[m ([36mmain=main@entry[m=0x5555555551a9 <main>, [36margc=argc@entry[m=1, [36margv=argv@entry[m=0x7fffffffd9c8)
+    at [32m../sysdeps/nptl/libc_start_call_main.h[m:74
+warning: 74	[32m../sysdeps/nptl/libc_start_call_main.h[m: No such file or directory
+[?2004h[?2004l[?2004h(gdb) q
+[?2004l[?2004hA debugging session is active.
+
+	Inferior 1 [process 37405] will be killed.
+
+Quit anyway? (y or n) y
+[?2004l[?2004h]0;pavantej@pavantej-VivoBook-ASUSLaptop-X509FA-X509FA: ~/acp2026/level1[01;32mpavantej@pavantej-VivoBook-ASUSLaptop-X509FA-X509FA[00m:[01;34m~/acp2026/level1[00m$ exit
+[?2004lexit
+
+Script done on 2026-03-18 15:28:58+05:30 [COMMAND_EXIT_CODE="0"]
