@@ -1,0 +1,233 @@
+Script started on 2026-03-18 16:03:47+05:30 [TERM="xterm-256color" TTY="/dev/pts/3" COLUMNS="154" LINES="18"]
+[?2004h]0;pavantej@pavantej-VivoBook-ASUSLaptop-X509FA-X509FA: ~/acp2026/level1[01;32mpavantej@pavantej-VivoBook-ASUSLaptop-X509FA-X509FA[00m:[01;34m~/acp2026/level1[00m$ gcc -g act1.c =[K-o act1
+[?2004l[?2004h]0;pavantej@pavantej-VivoBook-ASUSLaptop-X509FA-X509FA: ~/acp2026/level1[01;32mpavantej@pavantej-VivoBook-ASUSLaptop-X509FA-X509FA[00m:[01;34m~/acp2026/level1[00m$ gdb act1\[K
+[?2004l[35;1mGNU gdb (Ubuntu 15.0.50.20240403-0ubuntu1) 15.0.50.20240403-git[m
+Copyright (C) 2024 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <[32mhttp://gnu.org/licenses/gpl.html[m>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+[32m<https://www.gnu.org/software/gdb/bugs/>[m.
+Find the GDB manual and other documentation resources online at:
+    <[32mhttp://www.gnu.org/software/gdb/documentation/[m>.
+
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from [32mact1[m...
+[?2004h(gdb) b mi[Kain
+[?2004lBreakpoint 1 at [34m0x1196[m: file [32mact1.c[m, line 15.
+[?2004h(gdb) r
+[?2004lStarting program: [32m/home/pavantej/acp2026/level1/act1[m 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "[32m/lib/x86_64-linux-gnu/libthread_db.so.1[m".
+
+Breakpoint 1, [33mmain[m () at [32mact1.c[m:15
+15	[32mint[m [01mmain[m[31m()[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l17	    [01minputTemperatures[m[31m([m[35m7[m[31m,[md[31m);[m
+[?2004h[?2004l[?2004h(gdb) s
+[?2004l[33minputTemperatures[m ([36mn[m=7, [36mx[m=0x7fffffffd860) at [32mact1.c[m:21
+21	    [01;34mfor[m[31m([m[32mint[m i[31m=[m[35m0[m[31m;[mi[31m<[m[35m7[m[31m;[mi[31m++)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l22	        [01mprintf[m[31m([m[31m"Enter temperature for day %d: "[m[31m,[mi[31m+[m[35m1[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l23	        [01mscanf[m[31m([m[31m"%f"[m[31m,&[mx[31m[[mi[31m]);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lEnter temperature for day 1: 9
+21	    [01;34mfor[m[31m([m[32mint[m i[31m=[m[35m0[m[31m;[mi[31m<[m[35m7[m[31m;[mi[31m++)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) p x[0]
+[?2004l[36m$1[m = 9
+[?2004h(gdb) n
+[?2004l22	        [01mprintf[m[31m([m[31m"Enter temperature for day %d: "[m[31m,[mi[31m+[m[35m1[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l23	        [01mscanf[m[31m([m[31m"%f"[m[31m,&[mx[31m[[mi[31m]);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lEnter temperature for day 2: 5
+21	    [01;34mfor[m[31m([m[32mint[m i[31m=[m[35m0[m[31m;[mi[31m<[m[35m7[m[31m;[mi[31m++)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) p x[1][K[K[K[K[K[Kp x[1]
+[?2004l[36m$2[m = 5
+[?2004h(gdb) n
+[?2004l22	        [01mprintf[m[31m([m[31m"Enter temperature for day %d: "[m[31m,[mi[31m+[m[35m1[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l23	        [01mscanf[m[31m([m[31m"%f"[m[31m,&[mx[31m[[mi[31m]);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lEnter temperature for day 3: 4
+21	    [01;34mfor[m[31m([m[32mint[m i[31m=[m[35m0[m[31m;[mi[31m<[m[35m7[m[31m;[mi[31m++)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) p x[2]
+[?2004l[36m$3[m = 4
+[?2004h(gdb) n
+[?2004l22	        [01mprintf[m[31m([m[31m"Enter temperature for day %d: "[m[31m,[mi[31m+[m[35m1[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l23	        [01mscanf[m[31m([m[31m"%f"[m[31m,&[mx[31m[[mi[31m]);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lEnter temperature for day 4: 7
+21	    [01;34mfor[m[31m([m[32mint[m i[31m=[m[35m0[m[31m;[mi[31m<[m[35m7[m[31m;[mi[31m++)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) p x[2][K[K3
+[?2004lA syntax error in expression, near the end of `x[3'.
+[?2004h(gdb) p x[3]
+[?2004l[36m$4[m = 7
+[?2004h(gdb) n
+[?2004l22	        [01mprintf[m[31m([m[31m"Enter temperature for day %d: "[m[31m,[mi[31m+[m[35m1[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l23	        [01mscanf[m[31m([m[31m"%f"[m[31m,&[mx[31m[[mi[31m]);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lEnter temperature for day 5: 1
+21	    [01;34mfor[m[31m([m[32mint[m i[31m=[m[35m0[m[31m;[mi[31m<[m[35m7[m[31m;[mi[31m++)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) p x[4]
+[?2004l[36m$5[m = 1
+[?2004h(gdb) n
+[?2004l22	        [01mprintf[m[31m([m[31m"Enter temperature for day %d: "[m[31m,[mi[31m+[m[35m1[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l23	        [01mscanf[m[31m([m[31m"%f"[m[31m,&[mx[31m[[mi[31m]);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lEnter temperature for day 6: 8 2 12
+21	    [01;34mfor[m[31m([m[32mint[m i[31m=[m[35m0[m[31m;[mi[31m<[m[35m7[m[31m;[mi[31m++)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) p x[5]
+[?2004l[36m$6[m = 12
+[?2004h(gdb) n
+[?2004l22	        [01mprintf[m[31m([m[31m"Enter temperature for day %d: "[m[31m,[mi[31m+[m[35m1[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l23	        [01mscanf[m[31m([m[31m"%f"[m[31m,&[mx[31m[[mi[31m]);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lEnter temperature for day 7: 15
+21	    [01;34mfor[m[31m([m[32mint[m i[31m=[m[35m0[m[31m;[mi[31m<[m[35m7[m[31m;[mi[31m++)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) p x[6]
+[?2004l[36m$7[m = 15
+[?2004h(gdb) n
+[?2004l25	[31m}[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l[33mmain[m () at [32mact1.c[m:18
+18	    [01moutput[m[31m([m[01mfindHighest[m[31m([m[35m7[m[31m,[md[31m),[m[01mfindLowest[m[31m([m[35m7[m[31m,[md[31m));[m
+[?2004h[?2004l[?2004h(gdb) s
+[?2004l[33mfindLowest[m ([36mn[m=7, [36mx[m=0x7fffffffd860) at [32mact1.c[m:36
+36	    [32mint[m low[31m=[m[35m0[m[31m;[m
+[?2004h[?2004l[?2004h(gdb) finish
+[?2004lRun till exit from #0  [33mfindLowest[m ([36mn[m=7, [36mx[m=0x7fffffffd860) at [32mact1.c[m:36
+[34m0x00005555555551c7[m in [33mmain[m () at [32mact1.c[m:18
+18	    [01moutput[m[31m([m[01mfindHighest[m[31m([m[35m7[m[31m,[md[31m),[m[01mfindLowest[m[31m([m[35m7[m[31m,[md[31m));[m
+Value returned is $8 = 1
+[?2004h[?2004l[?2004h(gdb) s
+[?2004l[33mfindHighest[m ([36mn[m=7, [36mx[m=0x7fffffffd860) at [32mact1.c[m:27
+27	    [32mint[m high[31m=[m[35m0[m[31m;[m
+[?2004h[?2004l[?2004h(gdb) m[Kn
+[?2004l28	    [01;34mfor[m[31m([m[32mint[m i[31m=[m[35m0[m[31m;[mi[31m<[mn[31m;[mi[31m++)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l29	        [01;34mif[m[31m([mx[31m[[mi[31m]>[mx[31m[[mhigh[31m])[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) p i
+[?2004l[36m$9[m = 0
+[?2004h(gdb) p x[i]
+[?2004l[36m$10[m = 9
+[?2004h(gdb) p x[high]
+[?2004l[36m$11[m = 9
+[?2004h(gdb) n
+[?2004l28	    [01;34mfor[m[31m([m[32mint[m i[31m=[m[35m0[m[31m;[mi[31m<[mn[31m;[mi[31m++)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l29	        [01;34mif[m[31m([mx[31m[[mi[31m]>[mx[31m[[mhigh[31m])[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) p i
+[?2004l[36m$12[m = 1
+[?2004h(gdb) p i[2Pnp x[high][3Pi]
+[?2004l[36m$13[m = 5
+[?2004h(gdb) p x[i]i[K[2Pnp x[high]
+[?2004l[36m$14[m = 9
+[?2004h(gdb) n
+[?2004l28	    [01;34mfor[m[31m([m[32mint[m i[31m=[m[35m0[m[31m;[mi[31m<[mn[31m;[mi[31m++)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l29	        [01;34mif[m[31m([mx[31m[[mi[31m]>[mx[31m[[mhigh[31m])[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) np x[high][3Pi]i[K
+[?2004l[36m$15[m = 2
+[?2004h(gdb) p i[2Pnp x[high][3Pi]
+[?2004l[36m$16[m = 4
+[?2004h(gdb) p x[i]i[K[2Pnp x[high]
+[?2004l[36m$17[m = 9
+[?2004h(gdb) n
+[?2004l28	    [01;34mfor[m[31m([m[32mint[m i[31m=[m[35m0[m[31m;[mi[31m<[mn[31m;[mi[31m++)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l29	        [01;34mif[m[31m([mx[31m[[mi[31m]>[mx[31m[[mhigh[31m])[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) np x[high][3Pi]i[K
+[?2004l[36m$18[m = 3
+[?2004h(gdb) p i[2Pnp x[high][3Pi]
+[?2004l[36m$19[m = 7
+[?2004h(gdb) p x[i]i[K[2Pnp x[high][3Pi]high]
+[?2004l[36m$20[m = 9
+[?2004h(gdb) n
+[?2004l28	    [01;34mfor[m[31m([m[32mint[m i[31m=[m[35m0[m[31m;[mi[31m<[mn[31m;[mi[31m++)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l29	        [01;34mif[m[31m([mx[31m[[mi[31m]>[mx[31m[[mhigh[31m])[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) np x[high][3Pi]i[K
+[?2004l[36m$21[m = 4
+[?2004h(gdb) p i[2Pnp x[high][3Pi]
+[?2004l[36m$22[m = 1
+[?2004h(gdb) p x[i]i[K[2Pnp x[high]
+[?2004l[36m$23[m = 9
+[?2004h(gdb) n
+[?2004l28	    [01;34mfor[m[31m([m[32mint[m i[31m=[m[35m0[m[31m;[mi[31m<[mn[31m;[mi[31m++)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l29	        [01;34mif[m[31m([mx[31m[[mi[31m]>[mx[31m[[mhigh[31m])[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) np x[high][3Pi]i[K
+[?2004l[36m$24[m = 5
+[?2004h(gdb) p i[2Pnp x[high][3Pi]
+[?2004l[36m$25[m = 12
+[?2004h(gdb) p x[i]i[K[2Pnp x[high]
+[?2004l[36m$26[m = 9
+[?2004h(gdb) n
+[?2004l30	            high[31m=[mi[31m;[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l28	    [01;34mfor[m[31m([m[32mint[m i[31m=[m[35m0[m[31m;[mi[31m<[mn[31m;[mi[31m++)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) p high
+[?2004l[36m$27[m = 5
+[?2004h(gdb) 
+[?2004l[36m$28[m = 5
+[?2004h(gdb) n
+[?2004l29	        [01;34mif[m[31m([mx[31m[[mi[31m]>[mx[31m[[mhigh[31m])[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l30	            high[31m=[mi[31m;[m
+[?2004h[?2004l[?2004h(gdb) np highn[Kp x[high][3Pi]i[K
+[?2004l[36m$29[m = 6
+[?2004h(gdb) p i[2Pnp highn[Kp x[high][3Pi]
+[?2004l[36m$30[m = 15
+[?2004h(gdb) p x[i]i[K[2Pnp highn[Kp x[high]
+[?2004l[36m$31[m = 12
+[?2004h(gdb) p x[high][3Pi]i[K[2Pn
+[?2004l28	    [01;34mfor[m[31m([m[32mint[m i[31m=[m[35m0[m[31m;[mi[31m<[mn[31m;[mi[31m++)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l33	    [01;34mreturn[m x[31m[[mhigh[31m];[m
+[?2004h[?2004l[?2004h(gdb) p high
+[?2004l[36m$32[m = 6
+[?2004h(gdb) finish
+[?2004lRun till exit from #0  [33mfindHighest[m ([36mn[m=7, [36mx[m=0x7fffffffd860) at [32mact1.c[m:33
+[34m0x00005555555551dc[m in [33mmain[m () at [32mact1.c[m:18
+18	    [01moutput[m[31m([m[01mfindHighest[m[31m([m[35m7[m[31m,[md[31m),[m[01mfindLowest[m[31m([m[35m7[m[31m,[md[31m));[m
+Value returned is $33 = 15
+[?2004h[?2004l[?2004h(gdb) s
+[?2004l[33moutput[m ([36mx[m=15, [36my[m=1) at [32mact1.c[m:45
+45	    [01mprintf[m[31m([m[31m"Highest temperature = %.2f[m[35m\n[m[31m"[m[31m,[mx[31m);[m
+[?2004h[?2004l[?2004h(gdb) n[Kp x
+[?2004l[36m$34[m = 15
+[?2004h(gdb) n
+[?2004lHighest temperature = 15.00
+46	    [01mprintf[m[31m([m[31m"Lowest temperature = %.2f[m[35m\n[m[31m"[m[31m,[my[31m);[m
+[?2004h[?2004l[?2004h(gdb) p y
+[?2004l[36m$35[m = 1
+[?2004h(gdb) n
+[?2004lLowest temperature = 1.00
+47	[31m}[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l[33mmain[m () at [32mact1.c[m:19
+19	[31m}[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l[33m__libc_start_call_main[m ([36mmain=main@entry[m=0x555555555189 <main>, [36margc=argc@entry[m=1, [36margv=argv@entry[m=0x7fffffffd9c8)
+    at [32m../sysdeps/nptl/libc_start_call_main.h[m:74
+warning: 74	[32m../sysdeps/nptl/libc_start_call_main.h[m: No such file or directory
+[?2004h[?2004l[?2004h(gdb) q
+[?2004l[?2004hA debugging session is active.
+
+	Inferior 1 [process 55713] will be killed.
+
+Quit anyway? (y or n) y
+[?2004l[?2004h]0;pavantej@pavantej-VivoBook-ASUSLaptop-X509FA-X509FA: ~/acp2026/level1[01;32mpavantej@pavantej-VivoBook-ASUSLaptop-X509FA-X509FA[00m:[01;34m~/acp2026/level1[00m$ exit
+[?2004lexit
+
+Script done on 2026-03-18 16:14:32+05:30 [COMMAND_EXIT_CODE="0"]
