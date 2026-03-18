@@ -1,0 +1,144 @@
+Script started on 2026-03-18 15:37:19+05:30 [TERM="xterm-256color" TTY="/dev/pts/3" COLUMNS="154" LINES="18"]
+[?2004h]0;pavantej@pavantej-VivoBook-ASUSLaptop-X509FA-X509FA: ~/acp2026/level1[01;32mpavantej@pavantej-VivoBook-ASUSLaptop-X509FA-X509FA[00m:[01;34m~/acp2026/level1[00m$ gcc -g demo8.c -o dmo[Keo[K[K[Kemo8
+[?2004l[?2004h]0;pavantej@pavantej-VivoBook-ASUSLaptop-X509FA-X509FA: ~/acp2026/level1[01;32mpavantej@pavantej-VivoBook-ASUSLaptop-X509FA-X509FA[00m:[01;34m~/acp2026/level1[00m$ gdb demo8
+[?2004l[35;1mGNU gdb (Ubuntu 15.0.50.20240403-0ubuntu1) 15.0.50.20240403-git[m
+Copyright (C) 2024 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <[32mhttp://gnu.org/licenses/gpl.html[m>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+[32m<https://www.gnu.org/software/gdb/bugs/>[m.
+Find the GDB manual and other documentation resources online at:
+    <[32mhttp://www.gnu.org/software/gdb/documentation/[m>.
+
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from [32mdemo8[m...
+[?2004h(gdb) b main
+[?2004lBreakpoint 1 at [34m0x11b8[m: file [32mdemo8.c[m, line 15.
+[?2004h(gdb) r
+[?2004lStarting program: [32m/home/pavantej/acp2026/level1/demo8[m 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "[32m/lib/x86_64-linux-gnu/libthread_db.so.1[m".
+
+Breakpoint 1, [33mmain[m () at [32mdemo8.c[m:15
+15	[32mint[m [01mmain[m[31m()[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l17	    [01minput[m[31m([mstr1[31m);[m
+[?2004h[?2004l[?2004h(gdb) s
+[?2004l[33minput[m ([36mx[m=0x7fffffffd7c0 "\004") at [32mdemo8.c[m:24
+24	    [01mprintf[m[31m([m[31m"Enter string: "[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l25	    [01mscanf[m[31m([m[31m"%s"[m[31m,[mx[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lEnter string: hi!
+26	[31m}[m
+[?2004h[?2004l[?2004h(gdb) p x
+[?2004l[36m$1[m = [34m0x7fffffffd7c0[m "hi!"
+[?2004h(gdb) n
+[?2004l[33mmain[m () at [32mdemo8.c[m:18
+18	    [01minput[m[31m([mstr2[31m);[m
+[?2004h[?2004l[?2004h(gdb) s
+[?2004l[33minput[m ([36mx[m=0x7fffffffd830 "") at [32mdemo8.c[m:24
+24	    [01mprintf[m[31m([m[31m"Enter string: "[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l25	    [01mscanf[m[31m([m[31m"%s"[m[31m,[mx[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lEnter string: hello
+26	[31m}[m
+[?2004h[?2004l[?2004h(gdb) p c[Kx
+[?2004l[36m$2[m = [34m0x7fffffffd830[m "hello"
+[?2004h(gdb) n
+[?2004l[33mmain[m () at [32mdemo8.c[m:19
+19	    [01mconcatenate_strings[m[31m([mstr1[31m,[mstr2[31m);[m
+[?2004h[?2004l[?2004h(gdb) s
+[?2004l[33mconcatenate_strings[m ([36ma[m=0x7fffffffd7c0 "hi!", [36mb[m=0x7fffffffd830 "hello") at [32mdemo8.c[m:28
+28	    [32mint[m i[31m=[m[35m0[m[31m;[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l29	    [32mint[m n[31m=[m[01mstrlen[m[31m([ma[31m);[m
+[?2004h[?2004l[?2004h(gdb) p i
+[?2004l[36m$3[m = 0
+[?2004h(gdb) n
+[?2004l30	    [01;34mwhile[m[31m([mb[31m[[mi[31m]!=[m[31m'[m[35m\0[m[31m'[m[31m)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l31	        a[31m[[mn[31m+[mi[31m]=[mb[31m[[mi[31m];[m
+[?2004h[?2004l[?2004h(gdb) p a[0]
+[?2004l[36m$4[m = 104 'h'
+[?2004h(gdb) p b[0]
+[?2004l[36m$5[m = 104 'h'
+[?2004h(gdb) n
+[?2004l32	        i[31m++;[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l30	    [01;34mwhile[m[31m([mb[31m[[mi[31m]!=[m[31m'[m[35m\0[m[31m'[m[31m)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) p a[1]
+[?2004l[36m$6[m = 105 'i'
+[?2004h(gdb) p b[1]
+[?2004l[36m$7[m = 101 'e'
+[?2004h(gdb) n
+[?2004l31	        a[31m[[mn[31m+[mi[31m]=[mb[31m[[mi[31m];[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l32	        i[31m++;[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l30	    [01;34mwhile[m[31m([mb[31m[[mi[31m]!=[m[31m'[m[35m\0[m[31m'[m[31m)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) p a[2]
+[?2004l[36m$8[m = 33 '!'
+[?2004h(gdb) p b[2]
+[?2004l[36m$9[m = 108 'l'
+[?2004h(gdb) n
+[?2004l31	        a[31m[[mn[31m+[mi[31m]=[mb[31m[[mi[31m];[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l32	        i[31m++;[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l30	    [01;34mwhile[m[31m([mb[31m[[mi[31m]!=[m[31m'[m[35m\0[m[31m'[m[31m)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) p a[3]
+[?2004l[36m$10[m = 104 'h'
+[?2004h(gdb) p b[3]
+[?2004l[36m$11[m = 108 'l'
+[?2004h(gdb) n
+[?2004l31	        a[31m[[mn[31m+[mi[31m]=[mb[31m[[mi[31m];[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l32	        i[31m++;[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l30	    [01;34mwhile[m[31m([mb[31m[[mi[31m]!=[m[31m'[m[35m\0[m[31m'[m[31m)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) p a[4]
+[?2004l[36m$12[m = 101 'e'
+[?2004h(gdb) p b[4]
+[?2004l[36m$13[m = 111 'o'
+[?2004h(gdb) n
+[?2004l31	        a[31m[[mn[31m+[mi[31m]=[mb[31m[[mi[31m];[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l32	        i[31m++;[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l30	    [01;34mwhile[m[31m([mb[31m[[mi[31m]!=[m[31m'[m[35m\0[m[31m'[m[31m)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) p a[5]
+[?2004l[36m$14[m = 108 'l'
+[?2004h(gdb) p b[5]
+[?2004l[36m$15[m = 0 '\000'
+[?2004h(gdb) n
+[?2004l34	    a[31m[[mn[31m+[mi[31m]=[m[31m'[m[35m\0[m[31m'[m[31m;[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l35	[31m}[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l[33mmain[m () at [32mdemo8.c[m:20
+20	    [01mdisplay[m[31m([mstr1[31m);[m
+[?2004h[?2004l[?2004h(gdb) s
+[?2004l[33mdisplay[m ([36mx[m=0x7fffffffd7c0 "hi!hello") at [32mdemo8.c[m:37
+37	    [01mprintf[m[31m([m[31m"Concatenated string: %s[m[35m\n[m[31m"[m[31m,[mx[31m);[m
+[?2004h[?2004l[?2004h(gdb) n[Kp x
+[?2004l[36m$16[m = [34m0x7fffffffd7c0[m "hi!hello"
+[?2004h(gdb) n
+[?2004lConcatenated string: hi!hello
+38	[31m}[m
+[?2004h[?2004l[?2004h(gdb) q
+[?2004l[?2004hA debugging session is active.
+
+	Inferior 1 [process 43184] will be killed.
+
+Quit anyway? (y or n) y
+[?2004l[?2004h]0;pavantej@pavantej-VivoBook-ASUSLaptop-X509FA-X509FA: ~/acp2026/level1[01;32mpavantej@pavantej-VivoBook-ASUSLaptop-X509FA-X509FA[00m:[01;34m~/acp2026/level1[00m$ exit
+[?2004lexit
+
+Script done on 2026-03-18 15:39:55+05:30 [COMMAND_EXIT_CODE="0"]
