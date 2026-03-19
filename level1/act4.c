@@ -11,7 +11,7 @@ Function prototype:
 void readPlayers(int n, Player p[]);
 float calculateAverageRuns(int n, Player p[]);*/
 #include<stdio.h>
-#define n 11
+#define y 11
 typedef struct{
     char name[50];
     int jn,runs;
@@ -19,9 +19,9 @@ typedef struct{
 void readPlayers(int n, Player *p);
 float calculateAverageRuns(int n, Player *p);
 int main(){
-    Player p[n];
-    readPlayers(n,p);
-    float avg=calculateAverageRuns(n,p);
+    Player p[y];
+    readPlayers(y,p);
+    float avg=calculateAverageRuns(y,p);
     return 0;
 }
 void readPlayers(int n,Player *x){
