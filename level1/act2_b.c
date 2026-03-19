@@ -11,6 +11,7 @@ ElectricityBill input();
 ElectricityBill calculate_bill(ElectricityBill bill);
 void output(ElectricityBill bill);*/
 #include<stdio.h>
+#include<stdlib.h>
 typedef struct{
     int units;
     float rate;
@@ -30,8 +31,16 @@ ElectricityBill input(void){
     ElectricityBill e;
     printf("Enter number of units: ");
     scanf("%d",&e.units);
+    if(e.units<0){
+        printf("Invalid number of units\n");
+        exit(0);
+    }
     printf("Enter rate per unit: ");
     scanf("%f",&e.rate);
+    if(e.rate<0){
+        printf("Invalid rate per unit\n");
+        exit(0);
+    }
     return e;
 }
 ElectricityBill calculate_bill(ElectricityBill e){    
