@@ -29,7 +29,7 @@ void readPlayers(int n,Player *x){
     for(int i=0;i<n;i++){
         printf("Enter details of player %d\n",i+1);
         printf("Enter player name: ");
-        gets(x[i].name);
+        fgets(x[i].name,sizeof(x[i].name),stdin);
         printf("Enter jersey number: ");
         scanf("%d",&x[i].jn);
         printf("Enter number of runs: ");
