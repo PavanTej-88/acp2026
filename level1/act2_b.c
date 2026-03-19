@@ -16,7 +16,7 @@ typedef struct{
     float rate;
     float total_bill;
 }ElectricityBill;
-ElectricityBill input();
+ElectricityBill input(void);
 ElectricityBill calculate_bill(ElectricityBill e);
 void output(ElectricityBill e);
 int main(){
@@ -26,7 +26,7 @@ int main(){
     output(x);
     return 0;    
 }
-ElectricityBill input(){
+ElectricityBill input(void){
     ElectricityBill e;
     printf("Enter number of units: ");
     scanf("%d",&e.units);
@@ -43,7 +43,15 @@ ElectricityBill calculate_bill(ElectricityBill e){
     return e;
 }
 void output(ElectricityBill e){
-    printf("Electricity Bill = %.2f\n",e.total_bill);
+    printf("Electricity bill summary:\n");
+    printf("Number of units consumed = %d\n",e.units);
+    printf("Rate per unit = %.2f\n",e.rate);
+    if(e.units<50){
+        printf("You are qualified for free unit scheme: \nElectricity Bill = %.2f\n",e.total_bill);
+    }
+    else{
+        printf("Electricity Bill = %.2f\n",e.total_bill);
+    }
 }
 
 
