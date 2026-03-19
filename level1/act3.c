@@ -14,14 +14,14 @@ void displayHighestBill(int index, Bill bills[]);*/
 
 #include<stdio.h>
 #define r 5.4
-void input(int n, Bill *b);
-void calculate_Bills(int n, Bill *b);
-int findHighestBillIndex(int n, Bill *b);
-void displayHighestBill(int index, Bill *b);
 typedef struct{
     int consumerID;
     float unitsConsumed,billAmount;
 }Bill;
+void input(int n, Bill * );
+void calculate_Bills(int n, Bill * );
+int findHighestBillIndex(int n, Bill * );
+void displayHighestBill(int index, Bill * );
 int main(){
     int n;
     printf("Enter number of consumers: ");
