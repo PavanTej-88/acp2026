@@ -13,7 +13,7 @@ float calculateAverageRuns(int n, Player p[]);*/
 #include<stdio.h>
 #define n 11
 typedef struct{
-    char n[50];
+    char name[50];
     int jn,runs;
 }Player;
 void readPlayers(int n, Player *p);
@@ -28,7 +28,7 @@ void readPlayers(int n,Player *x){
     for(int i=0;i<n;i++){
         printf("Enter details of player %d\n",i+1);
         printf("Enter player name: ");
-        gets(x[i].n);
+        gets(x[i].name);
         printf("Enter jersey number: ");
         scanf("%d",&x[i].jn);
         printf("Enter number of runs: ");
