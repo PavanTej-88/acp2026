@@ -37,7 +37,7 @@ void input(int x,Bill *b){
     for(int i=0;i<x;i++){
         printf("Enter consumer ID of consumer %d: ",i+1);
         scanf("%d",&b[i].consumerID);
-        printf("Enter bills consumed of consumer %d: ",i+1);
+        printf("Enter units consumed of consumer %d: ",i+1);
         scanf("%f",&b[i].unitsConsumed);
     }
 }
@@ -48,7 +48,7 @@ void calculate_Bills(int x,Bill *b){
 }
 int findHighestBillIndex(int x, Bill *b){
     int l=0;
-    for(int i=0;i<x;i++){
+    for(int i=1;i<x;i++){
         if(b[i].billAmount>b[l].billAmount){
             l=i;
         }
@@ -56,6 +56,7 @@ int findHighestBillIndex(int x, Bill *b){
     return l;
 }
 void displayHighestBill(int l, Bill *b){
+    printf("---Highest bill summary---\n");
     printf("Highest consumed bill amount = %.2f\n",b[l].billAmount);
     printf("Consumer ID of highest consumed bill = %d\n",b[l].consumerID);
     printf("Units consumed of highest consumed bill = %.2f\n",b[l].unitsConsumed);
