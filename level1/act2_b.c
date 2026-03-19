@@ -43,7 +43,7 @@ ElectricityBill calculate_bill(ElectricityBill e){
     return e;
 }
 void output(ElectricityBill e){
-    printf("Electricity Bill = %.2f\n",&e.total_bill);
+    printf("Electricity Bill = %.2f\n",e.total_bill);
 }
 
 
