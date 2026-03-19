@@ -11,6 +11,7 @@ Function prototype:
 void readPlayers(int n, Player p[]);
 float calculateAverageRuns(int n, Player p[]);*/
 #include<stdio.h>
+#include<string.h>
 #define y 11
 typedef struct{
     char name[50];
@@ -40,8 +41,8 @@ float calculateAverageRuns(int n,Player *x){
     for(int i=0;i<n;i++){
         sum=sum+x[i].runs;
     }
-    printf("Average runs by the team = %.2f\n",sum/n);
-    return sum/n;
+    printf("Average runs by the team = %.2f\n",(float)sum/n);
+    return (float)sum/n;
 }
 
 
