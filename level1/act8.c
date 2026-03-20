@@ -24,7 +24,7 @@ void input(char *s){
 void count(char *s,int *v,int *c){
     int i=0;
     while(s[i]!='\0'){
-        if(s[i]=='a'||s[i]=='e's[i]=='i's[i]=='o's[i]=='u's[i]=='U's[i]=='O's[i]=='I's[i]=='E's[i]=='A'){
+        if(s[i]=='a'||s[i]=='e'||s[i]=='i'||s[i]=='o'||s[i]=='u'||s[i]=='U'||s[i]=='O'||s[i]=='I'||s[i]=='E'||s[i]=='A'){
             ( *v )++;
         }
         else if((s[i]>='A'&&s[i]<='Z')||(s[i]>='a'&&s[i]<='z')){
