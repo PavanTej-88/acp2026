@@ -1,0 +1,201 @@
+Script started on 2026-03-20 17:20:18+05:30 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="161" LINES="14"]
+[?2004h]0;pavantej@pavantej-VivoBook-ASUSLaptop-X509FA-X509FA: ~/acp2026/level1[01;32mpavantej@pavantej-VivoBook-ASUSLaptop-X509FA-X509FA[00m:[01;34m~/acp2026/level1[00m$ gcc -g act7.c -o act7
+[?2004l[?2004h]0;pavantej@pavantej-VivoBook-ASUSLaptop-X509FA-X509FA: ~/acp2026/level1[01;32mpavantej@pavantej-VivoBook-ASUSLaptop-X509FA-X509FA[00m:[01;34m~/acp2026/level1[00m$ gdb act7
+[?2004l[35;1mGNU gdb (Ubuntu 15.0.50.20240403-0ubuntu1) 15.0.50.20240403-git[m
+Copyright (C) 2024 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <[32mhttp://gnu.org/licenses/gpl.html[m>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+[32m<https://www.gnu.org/software/gdb/bugs/>[m.
+Find the GDB manual and other documentation resources online at:
+    <[32mhttp://www.gnu.org/software/gdb/documentation/[m>.
+
+[?2004h--Type <RET> for more, q to quit, c to continue without paging--c
+[?2004lFor help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from [32mact7[m...
+[?2004h(gdb) b main
+[?2004lBreakpoint 1 at [34m0x1198[m: file [32mact7.c[m, line 15.
+[?2004h(gdb) r
+[?2004lStarting program: [32m/home/pavantej/acp2026/level1/act7[m 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "[32m/lib/x86_64-linux-gnu/libthread_db.so.1[m".
+
+Breakpoint 1, [33mmain[m () at [32mact7.c[m:15
+15	[32mint[m [01mmain[m[31m()[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l17	    [01mprintf[m[31m([m[31m"Enter name of student 1: "[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l18	    [01minput[m[31m([ms1[31m);[m
+[?2004h[?2004l[?2004h(gdb) s
+[?2004l[33minput[m ([36mx[m=0x7fffffffd790 "\004") at [32mact7.c[m:27
+27	    [01mscanf[m[31m([m[31m"%99s"[m[31m,[mx[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lEnter name of student 1: pavante ej   e tej
+28	[31m}[m
+[?2004h[?2004l[?2004h(gdb) p x
+[?2004l[36m$1[m = [34m0x7fffffffd790[m "pavantej"
+[?2004h(gdb) n
+[?2004l[33mmain[m () at [32mact7.c[m:19
+19	    [01mprintf[m[31m([m[31m"Enter name of student 2: "[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l20	    [01minput[m[31m([ms2[31m);[m
+[?2004h[?2004l[?2004h(gdb) s
+[?2004l[33minput[m ([36mx[m=0x7fffffffd800 "") at [32mact7.c[m:27
+27	    [01mscanf[m[31m([m[31m"%99s"[m[31m,[mx[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lEnter name of student 2: rahu    rahul
+28	[31m}[m
+[?2004h[?2004l[?2004h(gdb) p x
+[?2004l[36m$2[m = [34m0x7fffffffd800[m "rahul"
+[?2004h(gdb) n
+[?2004l[33mmain[m () at [32mact7.c[m:21
+21	    [32mint[m l1[31m=[m[01mcalculate_name_length[m[31m([ms1[31m);[m
+[?2004h[?2004l[?2004h(gdb) s
+[?2004l[33mcalculate_name_length[m ([36mx[m=0x7fffffffd790 "pavantej") at [32mact7.c[m:30
+30	    [32mint[m i[31m=[m[35m0[m[31m;[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l31	    [01;34mwhile[m[31m([mx[31m[[mi[31m]!=[m[31m'[m[35m\0[m[31m'[m[31m)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) p i
+[?2004l[36m$3[m = 0
+[?2004h(gdb) n
+[?2004l32	        i[31m++;[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l31	    [01;34mwhile[m[31m([mx[31m[[mi[31m]!=[m[31m'[m[35m\0[m[31m'[m[31m)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) p i
+[?2004l[36m$4[m = 1
+[?2004h(gdb) n
+[?2004l32	        i[31m++;[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l31	    [01;34mwhile[m[31m([mx[31m[[mi[31m]!=[m[31m'[m[35m\0[m[31m'[m[31m)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) p i
+[?2004l[36m$5[m = 2
+[?2004h(gdb) n
+[?2004l32	        i[31m++;[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l31	    [01;34mwhile[m[31m([mx[31m[[mi[31m]!=[m[31m'[m[35m\0[m[31m'[m[31m)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) p i
+[?2004l[36m$6[m = 3
+[?2004h(gdb) n
+[?2004l32	        i[31m++;[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l31	    [01;34mwhile[m[31m([mx[31m[[mi[31m]!=[m[31m'[m[35m\0[m[31m'[m[31m)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) p i
+[?2004l[36m$7[m = 4
+[?2004h(gdb) n
+[?2004l32	        i[31m++;[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l31	    [01;34mwhile[m[31m([mx[31m[[mi[31m]!=[m[31m'[m[35m\0[m[31m'[m[31m)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) p i
+[?2004l[36m$8[m = 5
+[?2004h(gdb) n
+[?2004l32	        i[31m++;[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l31	    [01;34mwhile[m[31m([mx[31m[[mi[31m]!=[m[31m'[m[35m\0[m[31m'[m[31m)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) p i
+[?2004l[36m$9[m = 6
+[?2004h(gdb) n
+[?2004l32	        i[31m++;[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l31	    [01;34mwhile[m[31m([mx[31m[[mi[31m]!=[m[31m'[m[35m\0[m[31m'[m[31m)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) p i
+[?2004l[36m$10[m = 7
+[?2004h(gdb) n
+[?2004l32	        i[31m++;[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l31	    [01;34mwhile[m[31m([mx[31m[[mi[31m]!=[m[31m'[m[35m\0[m[31m'[m[31m)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) p i
+[?2004l[36m$11[m = 8
+[?2004h(gdb) n
+[?2004l34	    [01;34mreturn[m i[31m;[m
+[?2004h[?2004l[?2004h(gdb) p i
+[?2004l[36m$12[m = 8
+[?2004h(gdb) n
+[?2004l35	[31m}[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l[33mmain[m () at [32mact7.c[m:22
+22	    [32mint[m l2[31m=[m[01mcalculate_name_length[m[31m([ms2[31m);[m
+[?2004h[?2004l[?2004h(gdb) s
+[?2004l[33mcalculate_name_length[m ([36mx[m=0x7fffffffd800 "rahul") at [32mact7.c[m:30
+30	    [32mint[m i[31m=[m[35m0[m[31m;[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l31	    [01;34mwhile[m[31m([mx[31m[[mi[31m]!=[m[31m'[m[35m\0[m[31m'[m[31m)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) p i
+[?2004l[36m$13[m = 0
+[?2004h(gdb) n
+[?2004l32	        i[31m++;[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l31	    [01;34mwhile[m[31m([mx[31m[[mi[31m]!=[m[31m'[m[35m\0[m[31m'[m[31m)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) pi[K i
+[?2004l[36m$14[m = 1
+[?2004h(gdb) n
+[?2004l32	        i[31m++;[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l31	    [01;34mwhile[m[31m([mx[31m[[mi[31m]!=[m[31m'[m[35m\0[m[31m'[m[31m)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) pi[K i
+[?2004l[36m$15[m = 2
+[?2004h(gdb) n
+[?2004l32	        i[31m++;[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l31	    [01;34mwhile[m[31m([mx[31m[[mi[31m]!=[m[31m'[m[35m\0[m[31m'[m[31m)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) p i
+[?2004l[36m$16[m = 3
+[?2004h(gdb) n
+[?2004l32	        i[31m++;[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l31	    [01;34mwhile[m[31m([mx[31m[[mi[31m]!=[m[31m'[m[35m\0[m[31m'[m[31m)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) p i
+[?2004l[36m$17[m = 4
+[?2004h(gdb) n
+[?2004l32	        i[31m++;[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l31	    [01;34mwhile[m[31m([mx[31m[[mi[31m]!=[m[31m'[m[35m\0[m[31m'[m[31m)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) p i
+[?2004l[36m$18[m = 5
+[?2004h(gdb) n
+[?2004l34	    [01;34mreturn[m i[31m;[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l35	[31m}[m
+[?2004h[?2004l[?2004h(gdb) p i
+[?2004l[36m$19[m = 5
+[?2004h(gdb) n
+[?2004l[33mmain[m () at [32mact7.c[m:23
+23	    [01mcompare_output[m[31m([ml1[31m,[ml2[31m);[m
+[?2004h[?2004l[?2004h(gdb) s
+[?2004l[33mcompare_output[m ([36ml1[m=8, [36ml2[m=5) at [32mact7.c[m:37
+37	    [01mprintf[m[31m([m[31m"Length of student 1 name = %d[m[35m\n[m[31m"[m[31m,[ml1[31m);[m
+[?2004h[?2004l[?2004h(gdb) p {l1,l2}
+[?2004l[36m$20[m = {8, 5}
+[?2004h(gdb) n
+[?2004lLength of student 1 name = 8
+38	    [01mprintf[m[31m([m[31m"Length of student 2 name = %d[m[35m\n[m[31m"[m[31m,[ml2[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lLength of student 2 name = 5
+39	    [01;34mif[m[31m([ml1[31m>[ml2[31m)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l40	        [01mprintf[m[31m([m[31m"Student 1 name is longer with length = %d[m[35m\n[m[31m"[m[31m,[ml1[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lStudent 1 name is longer with length = 8
+48	[31m}[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l[33mmain[m () at [32mact7.c[m:24
+24	    [01;34mreturn[m [35m0[m[31m;[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l25	[31m}[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l[33m__libc_start_call_main[m ([36mmain=main@entry[m=0x555555555189 <main>, [36margc=argc@entry[m=1, [36margv=argv@entry[m=0x7fffffffd998) at [32m../sysdeps/nptl/libc_start_call_main.h[m:74
+warning: 74	[32m../sysdeps/nptl/libc_start_call_main.h[m: No such file or directory
+[?2004h[?2004l[?2004h(gdb) q
+[?2004l[?2004hA debugging session is active.
+
+	Inferior 1 [process 38300] will be killed.
+
+Quit anyway? (y or n) y
+[?2004l[?2004h]0;pavantej@pavantej-VivoBook-ASUSLaptop-X509FA-X509FA: ~/acp2026/level1[01;32mpavantej@pavantej-VivoBook-ASUSLaptop-X509FA-X509FA[00m:[01;34m~/acp2026/level1[00m$ exit
+[?2004lexit
+
+Script done on 2026-03-20 17:23:45+05:30 [COMMAND_EXIT_CODE="0"]
