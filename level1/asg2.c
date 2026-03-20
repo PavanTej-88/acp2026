@@ -39,25 +39,25 @@ Floor input(void){
     printf("Enter name of floor: ");
     scanf("%s",x.n);
     printf("Enter length of floor: ");
-    scanf("%f",x.l);
+    scanf("%f",&x.l);
     printf("Enter width of floor: ");
-    scanf("%f",x.w);
+    scanf("%f",&x.w);
     printf("Enter cost per unit for tiling: ");
-    scanf("%f",x.cpu);
+    scanf("%f",&x.cpu);
     return x;
 }
 float calculate_cost(Floor x){
-    float x.tc=(x.l*x.w)*x.cpu;
+    x.tc=(x.l*x.w)*x.cpu;
     return x.tc;
 }
 void compare_costs(Floor f1,Floor f2,Floor f3){
-    if((f1.tc>f2.tc)&&(f1.tc>f3.tc){
+    if((f1.tc>f2.tc)&&(f1.tc>f3.tc)){
         printf("Cost for tiling floor 1 is highest, cost = %.2f\n"f1.tc);
     }
-    else if((f2.tc>f3.tc)&&(f2.tc>f1.tc){
+    else if((f2.tc>f3.tc)&&(f2.tc>f1.tc)){
         printf("Cost for tiling floor 2 is highest, cost = %.2f\n"f2.tc);
     }
-    else if((f3.tc>f1.tc)&&(f3.tc>f2.tc){
+    else if((f3.tc>f1.tc)&&(f3.tc>f2.tc)){
         printf("Cost for tiling floor 3 is highest, cost = %.2f\n"f3.tc);
     }
     else if((f1.tc==f2.tc)&&(f1.tc>f3.tc)){
