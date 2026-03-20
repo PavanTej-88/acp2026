@@ -16,6 +16,10 @@ int main(){
     int n;
     printf("Enter number of students: ");
     scanf("%d",&n);
+    if(n<=0){
+        printf("Invalid number of students");
+        return 0;
+    }
     float m[n];
     inputMarks(n,m);
     float h=findHighestMark(n,m);
