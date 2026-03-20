@@ -39,11 +39,11 @@ int main(){
 void inputDetails(int x,Floor *f){
     for(int i=0;i<x;i++){
         printf("Enter length of floor %d: ",i+1);
-        scanf("%f",f[i].l);
+        scanf("%f",&f[i].l);
         printf("Enter width of floor %d: ",i+1);
-        scanf("%f",f[i].w);
+        scanf("%f",&f[i].w);
         printf("Enter cost per unit for floor %d: ",i+1);
-        scanf("%f",f[i].cpu);
+        scanf("%f",&f[i].cpu);
     }
 }void calculateCosts(int x,Floor *f){
     for(int i=0;i<x;i++){
@@ -61,7 +61,7 @@ void highestCostFloor(int x,Floor *f){
     displayHighestCost(l,f);
 }
 void displayHighestCost(int l,Floor *f){
-    printf("Floor %d has highest cost for tiling, cost = %d\n",l,f[l].tc);
+    printf("Floor %d has highest cost for tiling, cost = %.2f\n",l+1,f[l].tc);
 }
 
 
