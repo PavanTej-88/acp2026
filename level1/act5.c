@@ -34,36 +34,11 @@ void print_string(char *s){
     printf("%s\n",s);
 }
 void swap_strings(char *x,char *y){
-    int i=0;
-    if(strlen(x)>strlen(y)){
-        int k=strlen(x);
-        char temp[k];
-        for(i=0;i<=k;i++){
-            temp[i]=x[i];
-            x[i]=y[i];
-            y[i]=temp[i];
-        }
-    }
-
-        
-    else if(strlen(y)>strlen(x)){
-        int k=strlen(y);
-        char temp[k];
-        for(i=0;i<=k;i++){
-            temp[i]=y[i];
-            y[i]=x[i];
-            x[i]=temp[i];
-        }
-    }
-    else{
-        int k=strlen(y);
-        char temp[k];
-        for(i=0;i<=k;i++){
-            temp[i]=y[i];
-            y[i]=x[i];
-            x[i]=temp[i];
-        }
-}
+    int k=strlen(x)>strlen(y)?strlen(x):strlen(y);
+    char temp[k+1];
+    strcpy(temp,x);
+    strcpy(x,y);
+    strcpy(y,temp);
 }
 
 
