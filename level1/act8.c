@@ -6,6 +6,9 @@ void input(char *str);
 void count(char *str, int *vowels, int *consonants);
 void display(char *str, int vowels, int consonants);*/
 #include<stdio.h>
+void input(char *str);
+void count(char *str, int *vowels, int *consonants);
+void display(char *str, int vowels, int consonants);
 int main(){
     int vowels=0,consonants=0;
     char str[100];
