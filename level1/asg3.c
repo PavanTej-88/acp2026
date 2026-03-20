@@ -53,7 +53,7 @@ void inputDetails(int x,Floor *f){
 }
 void highestCostFloor(int x,Floor *f){
     int l=0;
-    for(int i=0;i<x;i++){
+    for(int i=1;i<x;i++){
         if(f[i].tc>f[l].tc){
             l=i;
         }
@@ -61,7 +61,7 @@ void highestCostFloor(int x,Floor *f){
     displayHighestCost(l,f);
 }
 void displayHighestCost(int l,Floor *f){
-    printf("Floor %d has highest cost for tiling, cost = %.2f\n",l+1,f[l].tc);
+    printf("Floor %d has highest cost for tiling:\nLength = %.2f\nWidth = %.2f\nArea = %.2f\nTotal cost = %.2f\n",l+1,f[l].l,f[l].w,f[l].a,f[l].tc);
 }
 
 
