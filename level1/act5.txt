@@ -1,0 +1,151 @@
+Script started on 2026-03-20 11:44:45+05:30 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="161" LINES="14"]
+[?2004h]0;pavantej@pavantej-VivoBook-ASUSLaptop-X509FA-X509FA: ~/acp2026/level1[01;32mpavantej@pavantej-VivoBook-ASUSLaptop-X509FA-X509FA[00m:[01;34m~/acp2026/level1[00m$ gcc -g act5.c -o act5
+[?2004l[?2004h]0;pavantej@pavantej-VivoBook-ASUSLaptop-X509FA-X509FA: ~/acp2026/level1[01;32mpavantej@pavantej-VivoBook-ASUSLaptop-X509FA-X509FA[00m:[01;34m~/acp2026/level1[00m$ gdb act5
+[?2004l[35;1mGNU gdb (Ubuntu 15.0.50.20240403-0ubuntu1) 15.0.50.20240403-git[m
+Copyright (C) 2024 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <[32mhttp://gnu.org/licenses/gpl.html[m>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+[32m<https://www.gnu.org/software/gdb/bugs/>[m.
+Find the GDB manual and other documentation resources online at:
+    <[32mhttp://www.gnu.org/software/gdb/documentation/[m>.
+
+[?2004h--Type <RET> for more, q to quit, c to continue without paging--c
+[?2004lFor help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from [32mact5[m...
+[?2004h(gdb) b main
+[?2004lBreakpoint 1 at [34m0x11f6[m: file [32mact5.c[m, line 11.
+[?2004h(gdb) r
+[?2004lStarting program: [32m/home/pavantej/acp2026/level1/act5[m 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "[32m/lib/x86_64-linux-gnu/libthread_db.so.1[m".
+
+Breakpoint 1, [33mmain[m () at [32mact5.c[m:11
+11	[32mint[m [01mmain[m[31m()[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l13	    [01mprintf[m[31m([m[31m"Enter size of string1: "[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l14	    [01mscanf[m[31m([m[31m"%d"[m[31m,&[mn1[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lEnter size of string1: 50
+15	    [01mprintf[m[31m([m[31m"Enter size of string2: "[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) p n1
+[?2004l[36m$1[m = 50
+[?2004h(gdb) n
+[?2004l16	    [01mscanf[m[31m([m[31m"%d"[m[31m,&[mn2[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lEnter size of string2: 30
+17	    [32mchar[m str1[31m[[mn1[31m],[mstr2[31m[[mn2[31m];[m
+[?2004h[?2004l[?2004h(gdb) p n2
+[?2004l[36m$2[m = 30
+[?2004h(gdb) n
+[?2004l18	    [01mread_string[m[31m([mstr1[31m,[mn1[31m);[m
+[?2004h[?2004l[?2004h(gdb) s
+[?2004l[33mread_string[m ([36ms[m=0x7fffffffd7f0 "", [36mx[m=50) at [32mact5.c[m:30
+30	    [01mprintf[m[31m([m[31m"Enter string{max_size=%d}: "[m[31m,[mx[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l31	    [01mscanf[m[31m([m[31m"%s"[m[31m,[ms[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lEnter string{max_size=50}: hello
+32	[31m}[m
+[?2004h[?2004l[?2004h(gdb) p s
+[?2004l[36m$3[m = [34m0x7fffffffd7f0[m "hello"
+[?2004h(gdb) n
+[?2004l[33mmain[m () at [32mact5.c[m:19
+19	    [01mread_string[m[31m([mstr2[31m,[mn2[31m);[m
+[?2004h[?2004l[?2004h(gdb) s
+[?2004l[33mread_string[m ([36ms[m=0x7fffffffd7d0 "", [36mx[m=30) at [32mact5.c[m:30
+30	    [01mprintf[m[31m([m[31m"Enter string{max_size=%d}: "[m[31m,[mx[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l31	    [01mscanf[m[31m([m[31m"%s"[m[31m,[ms[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lEnter string{max_size=30}: hi
+32	[31m}[m
+[?2004h[?2004l[?2004h(gdb) p s
+[?2004l[36m$4[m = [34m0x7fffffffd7d0[m "hi"
+[?2004h(gdb) n
+[?2004l[33mmain[m () at [32mact5.c[m:20
+20	    [01mprintf[m[31m([m[31m"Strings before swapping:[m[35m\n[m[31m"[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lStrings before swapping:
+21	    [01mprint_string[m[31m([mstr1[31m);[m
+[?2004h[?2004l[?2004h(gdb) s
+[?2004l[33mprint_string[m ([36ms[m=0x7fffffffd7f0 "hello") at [32mact5.c[m:34
+34	    [01mprintf[m[31m([m[31m"%s[m[35m\n[m[31m"[m[31m,[ms[31m);[m
+[?2004h[?2004l[?2004h(gdb) p s
+[?2004l[36m$5[m = [34m0x7fffffffd7f0[m "hello"
+[?2004h(gdb) n
+[?2004lhello
+35	[31m}[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l[33mmain[m () at [32mact5.c[m:22
+22	    [01mprint_string[m[31m([mstr2[31m);[m
+[?2004h[?2004l[?2004h(gdb) s
+[?2004l[33mprint_string[m ([36ms[m=0x7fffffffd7d0 "hi") at [32mact5.c[m:34
+34	    [01mprintf[m[31m([m[31m"%s[m[35m\n[m[31m"[m[31m,[ms[31m);[m
+[?2004h[?2004l[?2004h(gdb) p s
+[?2004l[36m$6[m = [34m0x7fffffffd7d0[m "hi"
+[?2004h(gdb) n
+[?2004lhi
+35	[31m}[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l[33mmain[m () at [32mact5.c[m:23
+23	    [01mswap_strings[m[31m([mstr1[31m,[mstr2[31m);[m
+[?2004h[?2004l[?2004h(gdb) s
+[?2004l[33mswap_strings[m ([36mx[m=0x7fffffffd7f0 "hello", [36my[m=0x7fffffffd7d0 "hi") at [32mact5.c[m:36
+36	[32mvoid[m [01mswap_strings[m[31m([m[32mchar[m [31m*[mx[31m,[m[32mchar[m [31m*[my[31m)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) p x[K{x,y}
+[?2004l[36m$7[m = {[34m0x7fffffffd7f0[m "hello", [34m0x7fffffffd7d0[m "hi"}
+[?2004h(gdb) n
+[?2004l37	    [32mint[m k[31m=[m[01mstrlen[m[31m([mx[31m)>[m[01mstrlen[m[31m([my[31m)?[m[01mstrlen[m[31m([mx[31m):[m[01mstrlen[m[31m([my[31m);[m
+[?2004h[?2004l[?2004h(gdb) p [K[Kn
+[?2004l38	    [32mchar[m temp[31m[[mk[31m+[m[35m1[m[31m];[m
+[?2004h[?2004l[?2004h(gdb) p k
+[?2004l[36m$8[m = 5
+[?2004h(gdb) n
+[?2004l39	    [01mstrcpy[m[31m([mtemp[31m,[mx[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l40	    [01mstrcpy[m[31m([mx[31m,[my[31m);[m
+[?2004h[?2004l[?2004h(gdb) n[Kp temp
+[?2004l[36m$9[m = "hello"
+[?2004h(gdb) n
+[?2004l41	    [01mstrcpy[m[31m([my[31m,[mtemp[31m);[m
+[?2004h[?2004l[?2004h(gdb) p x
+[?2004l[36m$10[m = [34m0x7fffffffd7f0[m "hi"
+[?2004h(gdb) n
+[?2004l42	[31m}[m
+[?2004h[?2004l[?2004h(gdb)  [Kp y
+[?2004l[36m$11[m = [34m0x7fffffffd7d0[m "hello"
+[?2004h(gdb) n
+[?2004l[33mmain[m () at [32mact5.c[m:24
+24	    [01mprintf[m[31m([m[31m"Strings after swapping:[m[35m\n[m[31m"[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lStrings after swapping:
+25	    [01mprint_string[m[31m([mstr1[31m);[m
+[?2004h[?2004l[?2004h(gdb) p str1
+[?2004l[36m$12[m = "hi\000lo\000\000\000\000\000\004\000\000\000\000\000\000\200\000\000\000\000\000\0008\330\377\377\377\177\000\000\006\000\000\000\216", '\000' <repeats 11 times>, <incomplete sequence \330>
+[?2004h(gdb) n
+[?2004lhi
+26	    [01mprint_string[m[31m([mstr2[31m);[m
+[?2004h[?2004l[?2004h(gdb)  [Kp str2
+[?2004l[36m$13[m = "hello\000\000\000\000\000 \000\000\000\000\000\000\200\000\000\000\000\000\000\000\000@\000\000"
+[?2004h(gdb) n
+[?2004lhello
+27	    [01;34mreturn[m [35m0[m[31m;[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l28	[31m}[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l[33m__libc_start_call_main[m ([36mmain=main@entry[m=0x5555555551e9 <main>, [36margc=argc@entry[m=1, [36margv=argv@entry[m=0x7fffffffd998) at [32m../sysdeps/nptl/libc_start_call_main.h[m:74
+warning: 74	[32m../sysdeps/nptl/libc_start_call_main.h[m: No such file or directory
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l[Inferior 1 (process 22233) exited normally]
+[?2004h[?2004l[?2004h(gdb) q
+[?2004l[?2004h]0;pavantej@pavantej-VivoBook-ASUSLaptop-X509FA-X509FA: ~/acp2026/level1[01;32mpavantej@pavantej-VivoBook-ASUSLaptop-X509FA-X509FA[00m:[01;34m~/acp2026/level1[00m$ exit
+[?2004lexit
+
+Script done on 2026-03-20 11:47:41+05:30 [COMMAND_EXIT_CODE="0"]
