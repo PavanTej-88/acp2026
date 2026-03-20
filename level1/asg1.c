@@ -41,7 +41,7 @@ float findHighestMark(int x,float *a){
 float findLowestMark(int x,float *a){
     int low=0;
     for(int i=1;i<x;i++){
-        if(a[i]<a[high]){
+        if(a[i]<a[low]){
             low=i;
         }
     }
@@ -51,11 +51,6 @@ void output(float max,float min){
     printf("Maximum marks = %.2f\n",max);
     printf("Minimum marks = %.2f\n",min);
 }
-
-
-
-
-
 
 
 
