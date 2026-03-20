@@ -14,9 +14,10 @@ int main(){
     scanf("%d",&n1);
     printf("Enter size of string2: ");
     scanf("%d",&n2);
-    char str1[n1],str2[n2];
-    read_string(str1,n1);
-    read_string(str2,n2);
+    int max=n1>n2?n1:n2;
+    char str1[max],str2[max];
+    read_string(str1,max);
+    read_string(str2,max);
     printf("Strings before swapping:\n");
     print_string(str1);
     print_string(str2);
