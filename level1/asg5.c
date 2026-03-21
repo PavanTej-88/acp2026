@@ -29,9 +29,9 @@ int main(){
     print_person(&p2);
     swap_person(&p1,&p2);
     printf("Structures after swapping\n");
-    printf("Person 1\n");
+    printf("Person 1 details\n");
     print_person(&p1);
-    printf("Person 2\n");
+    printf("Person 2 details\n");
     print_person(&p2);
     return 0;
 }
