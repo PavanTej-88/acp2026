@@ -8,6 +8,7 @@ void read_person(Person *p);
 void print_person(Person *p);
 void swap_person(Person *p1, Person *p2);*/
 #include<stdio.h>
+#include<string.h>
 typedef struct{
     char n[50];
     int age;
@@ -30,24 +31,59 @@ int main(){
 }
 void read_person(Person *p){
     printf("Enter person name: ");
-    scanf("%49s",(*p).n);
+    scanf("%49s",&(*p).n);
     printf("Enter person age: ");
-    scanf("%d",p.age);
+    scanf("%d",&(*p).age);
 }
 void print_person(Person *p){
-    printf("Name: %s\n",p.n);
+    printf("Name: %s\n",&(*p).n);
     printf("Age: %d\n",(*p).age);
 }
 void swap_person(Person *p1,Person *p2){
     Person temp;
-    *temp.n=*p1.n;
-    *p1.n=*p2.n;
-    *p2.n=*temp.n;
-    *temp.age=*p1.age;
-    *p1.age=*p2.age;
-    *p2.age=*temp.age;
+    strcpy(temp.n,&(*p1).n);
+    strcpy(&(*p1).n,&(*p2).n);
+    strcpy(&(*p2).n,temp.n);
+    temp.age=(*p1).age;
+    (*p1).age=(*p2).age;
+    (*p2).age=temp.age;
 }
     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
