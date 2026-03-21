@@ -11,7 +11,7 @@ Function prototype:
 void readCars(int n, Car_t c[]);
 void displayModernCars(int n, Car_t c[]);*/
 #include<stdio.h>
-#define n 4
+#define y 4
 typedef struct{
     int cid;
     char mn[50];
@@ -21,9 +21,9 @@ typedef struct{
 void readCars(int n, Car_t *c);
 void displayModernCars(int n, Car_t *c);
 int main(){
-    Car_t c[n];
-    readCars(n,c);
-    displayModernCars(n,c);
+    Car_t c[y];
+    readCars(y,c);
+    displayModernCars(y,c);
     return 0;
 }
 void readCars(int x,Car_t *c){
@@ -34,12 +34,12 @@ void readCars(int x,Car_t *c){
         scanf("%s",c[i].mn);
         printf("Enter manufacture year of car %d : ",i+1);
         scanf("%d",&c[i].my);
-        printf("Enter car id of car %d : ",i+1);
+        printf("Enter price of car %d : ",i+1);
         scanf("%f",&c[i].p);
     }
 }
 void displayModernCars(int x,Car_t *c){
-    printf("-------- Modern cars manufactured after 2022 --------"\n);
+    printf("-------- Modern cars manufactured after 2022 --------\n");
     for(int i=0;i<x;i++){
         if(c[i].my>2022){
             printf("Car ID: %d\nModel name: %s\nManufacture year(after 2022): %d\nPrice: %.2f\n",c[i].cid,c[i].mn,c[i].my,c[i].p);
