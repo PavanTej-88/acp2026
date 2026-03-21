@@ -31,7 +31,7 @@ void readCars(int x,Car_t *c){
         printf("Enter car id of car %d : ",i+1);
         scanf("%d",&c[i].cid);
         printf("Enter model name of car %d : ",i+1);
-        scanf("%s",c[i].mn);
+        scanf("%49s",c[i].mn);
         printf("Enter manufacture year of car %d : ",i+1);
         scanf("%d",&c[i].my);
         printf("Enter price of car %d : ",i+1);
@@ -39,11 +39,16 @@ void readCars(int x,Car_t *c){
     }
 }
 void displayModernCars(int x,Car_t *c){
+    int f=0;
     printf("-------- Modern cars manufactured after 2022 --------\n");
     for(int i=0;i<x;i++){
         if(c[i].my>2022){
             printf("Car ID: %d\nModel name: %s\nManufacture year(after 2022): %d\nPrice: %.2f\n",c[i].cid,c[i].mn,c[i].my,c[i].p);
+            f=1;
         }
+    }
+    if(f==0){
+        printf("No modern cars available manufactured after 2022\n");
     }
 }
 
