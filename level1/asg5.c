@@ -22,100 +22,35 @@ int main(){
     read_person(&p1);
     printf("Enter details of person 2\n");
     read_person(&p2);
-    printf("Details of person 1\n");
+    printf("Structures before swapping\n");
+    printf("Person 1\n");
     print_person(&p1);
-    printf("Details of person 1\n");
+    printf("Person 2\n");
     print_person(&p2);
     swap_person(&p1,&p2);
+    printf("Structures after swapping\n");
+    printf("Person 1\n");
+    print_person(&p1);
+    printf("Person 2\n");
+    print_person(&p2);
     return 0;
 }
 void read_person(Person *p){
     printf("Enter person name: ");
-    scanf("%49s",&(*p).n);
+    scanf("%49s",((*p).n));
     printf("Enter person age: ");
-    scanf("%d",&(*p).age);
+    scanf("%d",&((*p).age));
 }
 void print_person(Person *p){
-    printf("Name: %s\n",&(*p).n);
-    printf("Age: %d\n",(*p).age);
+    printf("Name: %s\n",((*p).n));
+    printf("Age: %d\n",((*p).age));
 }
 void swap_person(Person *p1,Person *p2){
     Person temp;
-    strcpy(temp.n,&(*p1).n);
-    strcpy(&(*p1).n,&(*p2).n);
-    strcpy(&(*p2).n,temp.n);
+    strcpy(temp.n,((*p1).n));
+    strcpy(((*p1).n),((*p2).n));
+    strcpy(((*p2).n),temp.n);
     temp.age=(*p1).age;
     (*p1).age=(*p2).age;
     (*p2).age=temp.age;
 }
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
