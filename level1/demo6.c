@@ -9,6 +9,7 @@ void print_array(int *arr, int n);
 void delete_array(int **arr);*/
 
 #include<stdio.h>
+#include<stdlib.h>
 int* create_array(int n); 
 void initialize_array(int *arr, int n); 
 void print_array(int *arr, int n); 
@@ -38,7 +39,7 @@ void print_array(int *a,int n){
         printf("Element %d: %d\n",i+1,*(a+i));
     }
 }
-void delete_array(int **a,int n){
+void delete_array(int **a){
     free(*a);
     *a=NULL;
 }
