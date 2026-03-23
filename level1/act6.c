@@ -44,21 +44,21 @@ int *allocate_scores(int n){
     return x;
 }
 void read_scores(int *a,int n){
-    for(int i=0;i,n;i++){
+    for(int i=0;i<n;i++){
         printf("Enter player %d score: ",i+1);
         scanf("%d",(a+i));
     }
 }
 int calculate_total(int *a,int n){
     int s=0;
-    for(int i=0;i,n;i++){
+    for(int i=0;i<n;i++){
         s=s+(*(a+i));
     }
     return s;
 }
 void display_scores(int *a,int n){
-    for(int i=0;i,n;i++){
-        printf("Element %d: %d",i+1,*(a+i));
+    for(int i=0;i<n;i++){
+        printf("Player %d: %d\n",i+1,*(a+i));
     }
 }
 void delete_scores(int **a){
