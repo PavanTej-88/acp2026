@@ -18,6 +18,10 @@ int main(){
     int n;
     printf("Enter number of elements of the array: ");
     scanf("%d",&n);
+    if(n<=0){
+        printf("Invalid size\n");
+        return 0;
+    }
     int *a=create_array(n);
     initialize_array(a,n);
     print_array(a,n);
@@ -26,6 +30,10 @@ int main(){
 }
 int * create_array(int n){
     int *x=malloc(n*sizeof(int));
+    if(x==NULL){
+        printf("Memory allocation failed\n");
+        exit(1);
+    }
     return x;
 }
 void initialize_array(int *a,int n){
