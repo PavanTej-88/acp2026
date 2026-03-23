@@ -1,0 +1,209 @@
+Script started on 2026-03-23 10:29:51+05:30 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="147" LINES="37"]
+[?2004h]0;pavantej@pavantej-VivoBook-ASUSLaptop-X509FA-X509FA: ~/acp2026/level1[01;32mpavantej@pavantej-VivoBook-ASUSLaptop-X509FA-X509FA[00m:[01;34m~/acp2026/level1[00m$ gcc -g asg3.c -o asg3
+[?2004l[?2004h]0;pavantej@pavantej-VivoBook-ASUSLaptop-X509FA-X509FA: ~/acp2026/level1[01;32mpavantej@pavantej-VivoBook-ASUSLaptop-X509FA-X509FA[00m:[01;34m~/acp2026/level1[00m$ gdb asg3
+[?2004l[35;1mGNU gdb (Ubuntu 15.1-1ubuntu1~24.04.1) 15.1[m
+Copyright (C) 2024 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <[32mhttp://gnu.org/licenses/gpl.html[m>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+[32m<https://www.gnu.org/software/gdb/bugs/>[m.
+Find the GDB manual and other documentation resources online at:
+    <[32mhttp://www.gnu.org/software/gdb/documentation/[m>.
+
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from [32masg3[m...
+[?2004h(gdb) b main
+[?2004lBreakpoint 1 at [34m0x1196[m: file [32masg3.c[m, line 25.
+[?2004h(gdb) r
+[?2004lStarting program: [32m/home/pavantej/acp2026/level1/asg3[m 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "[32m/lib/x86_64-linux-gnu/libthread_db.so.1[m".
+
+Breakpoint 1, [33mmain[m () at [32masg3.c[m:25
+25	[32mint[m [01mmain[m[31m()[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l27	    [01mprintf[m[31m([m[31m"Enter number of floors: "[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l28	    [01mscanf[m[31m([m[31m"%d"[m[31m,&[mn[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lEnter number of floors: 3
+29	    [01;34mif[m[31m([mn[31m<=[m[35m0[m[31m)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l33	    Floor f[31m[[mn[31m];[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l34	    [01minputDetails[m[31m([mn[31m,[mf[31m);[m
+[?2004h[?2004l[?2004h(gdb) p n
+[?2004l[36m$1[m = 3
+[?2004h(gdb) s
+[?2004l[33minputDetails[m ([36mx[m=3, [36mf[m=0x7fffffffd830) at [32masg3.c[m:40
+40	    [01;34mfor[m[31m([m[32mint[m i[31m=[m[35m0[m[31m;[mi[31m<[mx[31m;[mi[31m++)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l41	        [01mprintf[m[31m([m[31m"Enter length of floor %d: "[m[31m,[mi[31m+[m[35m1[m[31m);[m
+[?2004h[?2004l[?2004h(gdb)  [Kp i
+[?2004l[36m$2[m = 0
+[?2004h(gdb) n
+[?2004l42	        [01mscanf[m[31m([m[31m"%f"[m[31m,&[mf[31m[[mi[31m].[ml[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lEnter length of floor 1: 11
+43	        [01mprintf[m[31m([m[31m"Enter width of floor %d: "[m[31m,[mi[31m+[m[35m1[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) p fi[K[i].l
+[?2004l[36m$3[m = 11
+[?2004h(gdb) n
+[?2004l44	        [01mscanf[m[31m([m[31m"%f"[m[31m,&[mf[31m[[mi[31m].[mw[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lEnter width of floor 1: p 12
+45	        [01mprintf[m[31m([m[31m"Enter cost per unit for floor %d: "[m[31m,[mi[31m+[m[35m1[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) p a[Kf[i].w
+[?2004l[36m$4[m = 12
+[?2004h(gdb) n
+[?2004l46	        [01mscanf[m[31m([m[31m"%f"[m[31m,&[mf[31m[[mi[31m].[mcpu[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lEnter cost per unit for floor 1: 12  24
+40	    [01;34mfor[m[31m([m[32mint[m i[31m=[m[35m0[m[31m;[mi[31m<[mx[31m;[mi[31m++)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) -[Kp f[i].cpu
+[?2004l[36m$5[m = 24
+[?2004h(gdb) n
+[?2004l41	        [01mprintf[m[31m([m[31m"Enter length of floor %d: "[m[31m,[mi[31m+[m[35m1[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) p [K(gdb) p [K(gdb) p i
+[?2004l[36m$6[m = 1
+[?2004h(gdb) n
+[?2004l42	        [01mscanf[m[31m([m[31m"%f"[m[31m,&[mf[31m[[mi[31m].[ml[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lEnter length of floor 2: 24
+43	        [01mprintf[m[31m([m[31m"Enter width of floor %d: "[m[31m,[mi[31m+[m[35m1[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) p f[i].l
+[?2004l[36m$7[m = 24
+[?2004h(gdb) m[Kn
+[?2004l44	        [01mscanf[m[31m([m[31m"%f"[m[31m,&[mf[31m[[mi[31m].[mw[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lEnter width of floor 2: 44
+45	        [01mprintf[m[31m([m[31m"Enter cost per unit for floor %d: "[m[31m,[mi[31m+[m[35m1[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) p f[i].w
+[?2004l[36m$8[m = 44
+[?2004h(gdb) n
+[?2004l46	        [01mscanf[m[31m([m[31m"%f"[m[31m,&[mf[31m[[mi[31m].[mcpu[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lEnter cost per unit for floor 2: 2.5
+40	    [01;34mfor[m[31m([m[32mint[m i[31m=[m[35m0[m[31m;[mi[31m<[mx[31m;[mi[31m++)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) p f[i].cpu
+[?2004l[36m$9[m = 2.5
+[?2004h(gdb) n
+[?2004l41	        [01mprintf[m[31m([m[31m"Enter length of floor %d: "[m[31m,[mi[31m+[m[35m1[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l42	        [01mscanf[m[31m([m[31m"%f"[m[31m,&[mf[31m[[mi[31m].[ml[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lEnter length of floor 3: 11 2.5
+43	        [01mprintf[m[31m([m[31m"Enter width of floor %d: "[m[31m,[mi[31m+[m[35m1[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) p f[i].l
+[?2004l[36m$10[m = 12.5
+[?2004h(gdb) n
+[?2004l44	        [01mscanf[m[31m([m[31m"%f"[m[31m,&[mf[31m[[mi[31m].[mw[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lEnter width of floor 3: 4.5
+45	        [01mprintf[m[31m([m[31m"Enter cost per unit for floor %d: "[m[31m,[mi[31m+[m[35m1[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) p f[i].w
+[?2004l[36m$11[m = 4.5
+[?2004h(gdb) mn[K[Kn
+[?2004l46	        [01mscanf[m[31m([m[31m"%f"[m[31m,&[mf[31m[[mi[31m].[mcpu[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lEnter cost per unit for floor 3: 12.8
+40	    [01;34mfor[m[31m([m[32mint[m i[31m=[m[35m0[m[31m;[mi[31m<[mx[31m;[mi[31m++)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) p f[i].cpu
+[?2004l[36m$12[m = 12.8000002
+[?2004h(gdb) n
+[?2004l48	[31m}[m[32mvoid[m [01mcalculateCosts[m[31m([m[32mint[m x[31m,[mFloor [31m*[mf[31m)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) s[Kn
+[?2004l[33mmain[m () at [32masg3.c[m:35
+35	    [01mcalculateCosts[m[31m([mn[31m,[mf[31m);[m
+[?2004h[?2004l[?2004h(gdb) s
+[?2004l[33mcalculateCosts[m ([36mx[m=3, [36mf[m=0x7fffffffd830) at [32masg3.c[m:49
+49	    [01;34mfor[m[31m([m[32mint[m i[31m=[m[35m0[m[31m;[mi[31m<[mx[31m;[mi[31m++)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l50	        f[31m[[mi[31m].[ma[31m=[mf[31m[[mi[31m].[ml[31m*[mf[31m[[mi[31m].[mw[31m;[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l51	        f[31m[[mi[31m].[mtc[31m=[mf[31m[[mi[31m].[ma[31m*[mf[31m[[mi[31m].[mcpu[31m;[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l49	    [01;34mfor[m[31m([m[32mint[m i[31m=[m[35m0[m[31m;[mi[31m<[mx[31m;[mi[31m++)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) p f[i].y[Ktc
+[?2004l[36m$13[m = 3168
+[?2004h(gdb) n
+[?2004l50	        f[31m[[mi[31m].[ma[31m=[mf[31m[[mi[31m].[ml[31m*[mf[31m[[mi[31m].[mw[31m;[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l51	        f[31m[[mi[31m].[mtc[31m=[mf[31m[[mi[31m].[ma[31m*[mf[31m[[mi[31m].[mcpu[31m;[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l49	    [01;34mfor[m[31m([m[32mint[m i[31m=[m[35m0[m[31m;[mi[31m<[mx[31m;[mi[31m++)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) p f[i].tc
+[?2004l[36m$14[m = 2640
+[?2004h(gdb) n
+[?2004l50	        f[31m[[mi[31m].[ma[31m=[mf[31m[[mi[31m].[ml[31m*[mf[31m[[mi[31m].[mw[31m;[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l51	        f[31m[[mi[31m].[mtc[31m=[mf[31m[[mi[31m].[ma[31m*[mf[31m[[mi[31m].[mcpu[31m;[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l49	    [01;34mfor[m[31m([m[32mint[m i[31m=[m[35m0[m[31m;[mi[31m<[mx[31m;[mi[31m++)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) p f[i].y[Ktc
+[?2004l[36m$15[m = 720
+[?2004h(gdb) n
+[?2004l53	[31m}[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l[33mmain[m () at [32masg3.c[m:36
+36	    [01mhighestCostFloor[m[31m([mn[31m,[mf[31m);[m
+[?2004h[?2004l[?2004h(gdb) s
+[?2004l[33mhighestCostFloor[m ([36mx[m=3, [36mf[m=0x7fffffffd830) at [32masg3.c[m:55
+55	    [32mint[m l[31m=[m[35m0[m[31m;[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l56	    [01;34mfor[m[31m([m[32mint[m i[31m=[m[35m1[m[31m;[mi[31m<[mx[31m;[mi[31m++)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) p l
+[?2004l[36m$16[m = 0
+[?2004h(gdb) n
+[?2004l57	        [01;34mif[m[31m([mf[31m[[mi[31m].[mtc[31m>[mf[31m[[ml[31m].[mtc[31m)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l56	    [01;34mfor[m[31m([m[32mint[m i[31m=[m[35m1[m[31m;[mi[31m<[mx[31m;[mi[31m++)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l57	        [01;34mif[m[31m([mf[31m[[mi[31m].[mtc[31m>[mf[31m[[ml[31m].[mtc[31m)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l56	    [01;34mfor[m[31m([m[32mint[m i[31m=[m[35m1[m[31m;[mi[31m<[mx[31m;[mi[31m++)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb)  [Kp l
+[?2004l[36m$17[m = 0
+[?2004h(gdb) n
+[?2004l61	    [01mdisplayHighestCost[m[31m([ml[31m,[mf[31m);[m
+[?2004h[?2004l[?2004h(gdb) s
+[?2004l[33mdisplayHighestCost[m ([36ml[m=0, [36mf[m=0x7fffffffd830) at [32masg3.c[m:64
+64	    [01mprintf[m[31m([m[31m"Floor %d has highest cost for tiling:[m[35m\n[m[31mLength = %.2f[m[35m\n[m[31mWidth = %.2f[m[35m\n[m[31mArea = %.2f[m[35m\n[m[31mTotal cost = %.2f[m[35m\n[m[31m"[m[31m,[ml[31m+[m[35m1[m[31m,[mf[31m[[ml[31m].[ml[31m,[mf[31m[[ml[31m].[mw[31m,[mf[31m[[ml[31m].[ma[31m,[mf[31m[[ml[31m].[mtc[31m);[m
+[?2004h[?2004l[?2004h(gdb) p f[l][K[K[K[Kl
+[?2004l[36m$18[m = 0
+[?2004h(gdb) p f[l].tc
+[?2004l[36m$19[m = 3168
+[?2004h(gdb) n
+[?2004lFloor 1 has highest cost for tiling:
+Length = 11.00
+Width = 12.00
+Area = 132.00
+Total cost = 3168.00
+65	[31m}[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l[33mhighestCostFloor[m ([36mx[m=3, [36mf[m=0x7fffffffd830) at [32masg3.c[m:62
+62	[31m}[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l[33mmain[m () at [32masg3.c[m:37
+37	    [01;34mreturn[m [35m0[m[31m;[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l38	[31m}[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l[33m__libc_start_call_main[m ([36mmain=main@entry[m=0x555555555189 <main>, [36margc=argc@entry[m=1, [36margv=argv@entry[m=0x7fffffffd9c8)
+    at [32m../sysdeps/nptl/libc_start_call_main.h[m:74
+warning: 74	[32m../sysdeps/nptl/libc_start_call_main.h[m: No such file or directory
+[?2004h[?2004l[?2004h(gdb) q
+[?2004l[?2004hA debugging session is active.
+
+	Inferior 1 [process 17803] will be killed.
+
+Quit anyway? (y or n) y
+[?2004l[?2004h]0;pavantej@pavantej-VivoBook-ASUSLaptop-X509FA-X509FA: ~/acp2026/level1[01;32mpavantej@pavantej-VivoBook-ASUSLaptop-X509FA-X509FA[00m:[01;34m~/acp2026/level1[00m$ exit
+[?2004lexit
+
+Script done on 2026-03-23 10:37:12+05:30 [COMMAND_EXIT_CODE="0"]
