@@ -32,7 +32,7 @@ int count_words(char *x){
     return w;
 }
 void display(char *x,int w){
-    int i=0;
+    int i=0,x=0;
     while((x[i]!='\0')&&(x[i]!='\n')){
         i++;
     }
