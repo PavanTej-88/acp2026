@@ -24,7 +24,7 @@ void input(char *x){
 int count_words(char *x){
     int i,w=0;
     while((x[i]!='\0')&&(x[i]!='\n')){
-        if(x[i]==" "){
+        if(x[i]==' '){
             w++;
         }
         i++;
