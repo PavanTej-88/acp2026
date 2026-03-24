@@ -58,11 +58,8 @@ void read_inventory(Medicine_t*  x,int n){
 void display_inventory(Medicine_t*  x,int n){
     for(int i=0;i<n;i++){
         printf("Medicine ID of medicine %d: ",i+1);
-        scanf("%d",&((*x).mid));
         printf("Name of medicine %d: ",i+1);
-        scanf("%s",(*x).n);
         printf("Expiration year of medicine %d: ",i+1);
-        scanf("%d",&((*x).y));
     }
 }
 void delete_inventory(Medicine_t** x){
