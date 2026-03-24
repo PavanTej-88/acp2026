@@ -32,7 +32,12 @@ int count_words(char *x){
     return w;
 }
 void display(char *x,int w){
-    printf("Number of spaces in the sentence '%s' is %d",x,w);
+    int i=0;
+    while((x[i]!='\0')&&(x[i]!='\n')){
+        i++;
+    }
+    x[i]='\0';
+    printf("Number of spaces in the sentence '%s' is %d\n",x,w+1);
 }
 
 
