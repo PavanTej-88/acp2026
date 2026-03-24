@@ -56,10 +56,11 @@ void read_inventory(Medicine_t*  x,int n){
     }
 }
 void display_inventory(Medicine_t*  x,int n){
+    printf("------Inventory------\n");
     for(int i=0;i<n;i++){
-        printf("Medicine ID of medicine %d: ",i+1);
-        printf("Name of medicine %d: ",i+1);
-        printf("Expiration year of medicine %d: ",i+1);
+        printf("Medicine ID of medicine %d: %d\n",i+1,((*x).mid));
+        printf("Name of medicine %d: %s\n",i+1,((*x).n));
+        printf("Expiration year of medicine %d: %d\n",i+1,((*x).y));
     }
 }
 void delete_inventory(Medicine_t** x){
