@@ -19,7 +19,7 @@ int main(){
 }
 void input(char *x){
     printf("Enter sentence: ");
-    fgets(x,sizeof(x),stdin);
+    fgets(x,100,stdin);
 }
 int count_words(char *x){
     int i,w=0;
