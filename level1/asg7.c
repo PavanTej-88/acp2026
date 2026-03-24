@@ -18,13 +18,18 @@ int main(){
     return 0;
 }
 void input(char *x){
+    int i=0;
     printf("Enter sentence: ");
     fgets(x,100,stdin);
+    while((x[i]!='\0')&&(x[i]!='\n')){
+        i++;
+    }
+    x[i]='\0';
 }
 int count_words(char *x){
     int i=0,w=0;
     while((x[i]!='\0')&&(x[i]!='\n')){
-        if(x[i]==' '){
+        if((x[i]!=' ')&&(i==0||(x[i-1]==' '))){
             w++;
         }
         i++;
@@ -32,12 +37,8 @@ int count_words(char *x){
     return w;
 }
 void display(char *x,int w){
-    int i=0,x=0;
-    while((x[i]!='\0')&&(x[i]!='\n')){
-        i++;
-    }
-    x[i]='\0';
-    printf("Number of spaces in the sentence '%s' is %d\n",x,w+1);
+    int i=0;
+    printf("Number of words in the sentence '%s' is %d\n",x,w);
 }
 
 
