@@ -22,7 +22,7 @@ void input(char *x){
     fgets(x,100,stdin);
 }
 int count_words(char *x){
-    int i,w=0;
+    int i=0,w=0;
     while((x[i]!='\0')&&(x[i]!='\n')){
         if(x[i]==' '){
             w++;
