@@ -50,7 +50,7 @@ void read_inventory(Medicine_t*  x,int n){
         printf("Enter medicine ID of medicine %d: ",i+1);
         scanf("%d",&((*x).mid));
         printf("Enter name of medicine %d: ",i+1);
-        scanf("%s",&((*x).n));
+        scanf("%s",(*x).n);
         printf("Enter expiration year of medicine %d: ",i+1);
         scanf("%d",&((*x).y));
     }
@@ -60,7 +60,7 @@ void display_inventory(Medicine_t*  x,int n){
         printf("Medicine ID of medicine %d: ",i+1);
         scanf("%d",&((*x).mid));
         printf("Name of medicine %d: ",i+1);
-        scanf("%s",&((*x).n));
+        scanf("%s",(*x).n);
         printf("Expiration year of medicine %d: ",i+1);
         scanf("%d",&((*x).y));
     }
