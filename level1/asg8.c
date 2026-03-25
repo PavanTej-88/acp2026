@@ -28,9 +28,14 @@ int main(){
 void input(char *x){
     printf("Enter password: ");
     fgets(x,100,stdin);
+    int n=strlen(x);
+    if(x[n-1]=='\n'){
+        x[n-1]='\0';
+    }
+
 }
 int is_valid(char *x){
-    int u,l,d;
+    int u=0,l=0,d=0;
     int n=strlen(x);
     for(int i=0;i<n;i++){
         if((is_upper(x[i]))==1){
@@ -68,7 +73,7 @@ int is_upper(char x){
         }
 }
 int is_lower(char x){
-        if((x>='A')&&(x<='Z')){
+        if((x>='a')&&(x<='z')){
             return 1;
             
         }
@@ -78,7 +83,7 @@ int is_lower(char x){
 }
 int is_digit(char x){
         
-        if((x>=0)&&(x<=9)){
+        if((x>='0')&&(x<='9')){
             return 1;
         }
         else{
