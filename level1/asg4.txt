@@ -1,0 +1,242 @@
+Script started on 2026-03-27 11:37:49+05:30 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="147" LINES="19"]
+[?2004h]0;pavantej@pavantej-VivoBook-ASUSLaptop-X509FA-X509FA: ~/acp2026/level1[01;32mpavantej@pavantej-VivoBook-ASUSLaptop-X509FA-X509FA[00m:[01;34m~/acp2026/level1[00m$ gcc -g asg5[K4.c -o asg4
+[?2004l[?2004h]0;pavantej@pavantej-VivoBook-ASUSLaptop-X509FA-X509FA: ~/acp2026/level1[01;32mpavantej@pavantej-VivoBook-ASUSLaptop-X509FA-X509FA[00m:[01;34m~/acp2026/level1[00m$ gdb asg4.[K[K4
+[?2004l[35;1mGNU gdb (Ubuntu 15.1-1ubuntu1~24.04.1) 15.1[m
+Copyright (C) 2024 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <[32mhttp://gnu.org/licenses/gpl.html[m>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+[32m<https://www.gnu.org/software/gdb/bugs/>[m.
+Find the GDB manual and other documentation resources online at:
+    <[32mhttp://www.gnu.org/software/gdb/documentation/[m>.
+
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from [32masg4[m...
+[?2004h(gdb) b main
+[?2004lBreakpoint 1 at [34m0x11b8[m: file [32masg4.c[m, line 23.
+[?2004h(gdb) r
+[?2004lStarting program: [32m/home/pavantej/acp2026/level1/asg4[m 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "[32m/lib/x86_64-linux-gnu/libthread_db.so.1[m".
+
+Breakpoint 1, [33mmain[m () at [32masg4.c[m:23
+23	[32mint[m [01mmain[m[31m()[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) b[Kn
+[?2004l25	    [01mreadCars[m[31m([my[31m,[mc[31m);[m
+[?2004h[?2004l[?2004h(gdb) s
+[?2004l[33mreadCars[m ([36mx[m=4, [36mc[m=0x7fffffffd790) at [32masg4.c[m:30
+30	    [01;34mfor[m[31m([m[32mint[m i[31m=[m[35m0[m[31m;[mi[31m<[mx[31m;[mi[31m++)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l31	        [01mprintf[m[31m([m[31m"Enter car id of car %d : "[m[31m,[mi[31m+[m[35m1[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l32	        [01mscanf[m[31m([m[31m"%d"[m[31m,&[mc[31m[[mi[31m].[mcid[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lEnter car id of car 1 : 1
+33	        [01mprintf[m[31m([m[31m"Enter model name of car %d : "[m[31m,[mi[31m+[m[35m1[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) p c[i].cid
+[?2004l[36m$1[m = 1
+[?2004h(gdb) n
+[?2004l34	        [01mscanf[m[31m([m[31m"%49s"[m[31m,[mc[31m[[mi[31m].[mmn[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lEnter model name of car 1 : nexon
+35	        [01mprintf[m[31m([m[31m"Enter manufacture year of car %d : "[m[31m,[mi[31m+[m[35m1[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) p c[i].mn
+[?2004l[36m$2[m = "nexon\000\000\000\000\000\000\000)\003\214\000\000\000\000\000h\330\377\377\377\177\000\000\260\330\377\377\377\177\000\000\333\355\375\367\377\177\000\000\004\000\000\000\000"
+[?2004h(gdb) n
+[?2004l36	        [01mscanf[m[31m([m[31m"%d"[m[31m,&[mc[31m[[mi[31m].[mmy[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lEnter manufacture year of car 1 : 2026
+37	        [01mprintf[m[31m([m[31m"Enter price of car %d : "[m[31m,[mi[31m+[m[35m1[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) p c[i].my
+[?2004l[36m$3[m = 2026
+[?2004h(gdb) n
+[?2004l38	        [01mscanf[m[31m([m[31m"%f"[m[31m,&[mc[31m[[mi[31m].[mp[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lEnter price of car 1 : 1200000
+30	    [01;34mfor[m[31m([m[32mint[m i[31m=[m[35m0[m[31m;[mi[31m<[mx[31m;[mi[31m++)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) p c[i].p
+[?2004l[36m$4[m = 1200000
+[?2004h(gdb) n
+[?2004l31	        [01mprintf[m[31m([m[31m"Enter car id of car %d : "[m[31m,[mi[31m+[m[35m1[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l32	        [01mscanf[m[31m([m[31m"%d"[m[31m,&[mc[31m[[mi[31m].[mcid[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lEnter car id of car 2 : 2
+33	        [01mprintf[m[31m([m[31m"Enter model name of car %d : "[m[31m,[mi[31m+[m[35m1[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) p c[i].co[Kid
+[?2004l[36m$5[m = 2
+[?2004h(gdb) n
+[?2004l34	        [01mscanf[m[31m([m[31m"%49s"[m[31m,[mc[31m[[mi[31m].[mmn[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lEnter model name of car 2 : harrier
+35	        [01mprintf[m[31m([m[31m"Enter manufacture year of car %d : "[m[31m,[mi[31m+[m[35m1[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) p c[i].mn
+[?2004l[36m$6[m = "harrier\000\000\000\000\000\377\377\377\377\377\377\377\377@\000\000\000\000\000\000\000\b\000\000\000\000\000\000\000\000\000 \000\000\000\000\000\000\b\000\000\000"
+[?2004h(gdb) n
+[?2004l36	        [01mscanf[m[31m([m[31m"%d"[m[31m,&[mc[31m[[mi[31m].[mmy[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lEnter manufacture year of car 2 : 2028
+37	        [01mprintf[m[31m([m[31m"Enter price of car %d : "[m[31m,[mi[31m+[m[35m1[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) p c[i].my
+[?2004l[36m$7[m = 2028
+[?2004h(gdb) n
+[?2004l38	        [01mscanf[m[31m([m[31m"%f"[m[31m,&[mc[31m[[mi[31m].[mp[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lEnter price of car 2 : 2200000
+30	    [01;34mfor[m[31m([m[32mint[m i[31m=[m[35m0[m[31m;[mi[31m<[mx[31m;[mi[31m++)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) p c[i].p
+[?2004l[36m$8[m = 2200000
+[?2004h(gdb) n
+[?2004l31	        [01mprintf[m[31m([m[31m"Enter car id of car %d : "[m[31m,[mi[31m+[m[35m1[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l32	        [01mscanf[m[31m([m[31m"%d"[m[31m,&[mc[31m[[mi[31m].[mcid[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lEnter car id of car 3 : 3
+33	        [01mprintf[m[31m([m[31m"Enter model name of car %d : "[m[31m,[mi[31m+[m[35m1[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) n[Kp c[i].cid
+[?2004l[36m$9[m = 3
+[?2004h(gdb) n
+[?2004l34	        [01mscanf[m[31m([m[31m"%49s"[m[31m,[mc[31m[[mi[31m].[mmn[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lEnter model name of car 3 : victoris
+35	        [01mprintf[m[31m([m[31m"Enter manufacture year of car %d : "[m[31m,[mi[31m+[m[35m1[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) p c[i].mn
+[?2004l[36m$10[m = "victoris\000\000\000\000\000\000@\000\000\000\000\000\000\000\004\000\000\000\000\000\000\200\000\000\000\000\000\000h\330\377\377\377\177\000\000\006\000\000\000\216"
+[?2004h(gdb) n
+[?2004l36	        [01mscanf[m[31m([m[31m"%d"[m[31m,&[mc[31m[[mi[31m].[mmy[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lEnter manufacture year of car 3 : 2025
+37	        [01mprintf[m[31m([m[31m"Enter price of car %d : "[m[31m,[mi[31m+[m[35m1[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) p c[i].my
+[?2004l[36m$11[m = 2025
+[?2004h(gdb) n
+[?2004l38	        [01mscanf[m[31m([m[31m"%f"[m[31m,&[mc[31m[[mi[31m].[mp[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lEnter price of car 3 : 2000000
+30	    [01;34mfor[m[31m([m[32mint[m i[31m=[m[35m0[m[31m;[mi[31m<[mx[31m;[mi[31m++)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) p c[i].p
+[?2004l[36m$12[m = 2000000
+[?2004h(gdb) 
+[?2004l[36m$13[m = 2000000
+[?2004h(gdb) n
+[?2004l31	        [01mprintf[m[31m([m[31m"Enter car id of car %d : "[m[31m,[mi[31m+[m[35m1[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l32	        [01mscanf[m[31m([m[31m"%d"[m[31m,&[mc[31m[[mi[31m].[mcid[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lEnter car id of car 4 : 4
+33	        [01mprintf[m[31m([m[31m"Enter model name of car %d : "[m[31m,[mi[31m+[m[35m1[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) p c[i].cid
+[?2004l[36m$14[m = 4
+[?2004h(gdb) n
+[?2004l34	        [01mscanf[m[31m([m[31m"%49s"[m[31m,[mc[31m[[mi[31m].[mmn[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lEnter model name of car 4 : safari
+35	        [01mprintf[m[31m([m[31m"Enter manufacture year of car %d : "[m[31m,[mi[31m+[m[35m1[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) p c[i].mn
+[?2004l[36m$15[m = "safari", '\000' <repeats 43 times>
+[?2004h(gdb) n
+[?2004l36	        [01mscanf[m[31m([m[31m"%d"[m[31m,&[mc[31m[[mi[31m].[mmy[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lEnter manufacture year of car 4 : 2020
+37	        [01mprintf[m[31m([m[31m"Enter price of car %d : "[m[31m,[mi[31m+[m[35m1[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) p c[i].my
+[?2004l[36m$16[m = 2020
+[?2004h(gdb) n
+[?2004l38	        [01mscanf[m[31m([m[31m"%f"[m[31m,&[mc[31m[[mi[31m].[mp[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lEnter price of car 4 : 2500000
+30	    [01;34mfor[m[31m([m[32mint[m i[31m=[m[35m0[m[31m;[mi[31m<[mx[31m;[mi[31m++)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) p c[i].p
+[?2004l[36m$17[m = 2500000
+[?2004h(gdb) n
+[?2004l40	[31m}[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l[33mmain[m () at [32masg4.c[m:26
+26	    [01mdisplayModernCars[m[31m([my[31m,[mc[31m);[m
+[?2004h[?2004l[?2004h(gdb) s
+[?2004l[33mdisplayModernCars[m ([36mx[m=4, [36mc[m=0x7fffffffd790) at [32masg4.c[m:42
+42	    [32mint[m f[31m=[m[35m0[m[31m;[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l43	    [01mprintf[m[31m([m[31m"-------- Modern cars manufactured after 2022 --------[m[35m\n[m[31m"[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l-------- Modern cars manufactured after 2022 --------
+44	    [01;34mfor[m[31m([m[32mint[m i[31m=[m[35m0[m[31m;[mi[31m<[mx[31m;[mi[31m++)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l45	        [01;34mif[m[31m([mc[31m[[mi[31m].[mmy[31m>[m[35m2022[m[31m)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) p c[i].my
+[?2004l[36m$18[m = 2026
+[?2004h(gdb) n
+[?2004l46	            [01mprintf[m[31m([m[31m"Car ID: %d[m[35m\n[m[31mModel name: %s[m[35m\n[m[31mManufacture year(after 2022): %d[m[35m\n[m[31mPrice: %.2f[m[35m\n[m[31m"[m[31m,[mc[31m[[mi[31m].[mcid[31m,[mc[31m[[mi[31m].[mmn[31m,[mc[31m[[mi[31m].[mmy[31m,[mc[31m[[mi[31m].[mp[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lCar ID: 1
+Model name: nexon
+Manufacture year(after 2022): 2026
+Price: 1200000.00
+47	            f[31m=[m[35m1[m[31m;[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l44	    [01;34mfor[m[31m([m[32mint[m i[31m=[m[35m0[m[31m;[mi[31m<[mx[31m;[mi[31m++)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l45	        [01;34mif[m[31m([mc[31m[[mi[31m].[mmy[31m>[m[35m2022[m[31m)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) p c[i]
+[?2004l[36m$19[m = {[36mcid[m = 2, 
+  [36mmn[m = "harrier\000\000\000\000\000\377\377\377\377\377\377\377\377@\000\000\000\000\000\000\000\b\000\000\000\000\000\000\000\000\000 \000\000\000\000\000\000\b\000\000\000", [36mmy[m = 2028, [36mp[m = 2200000}
+[?2004h(gdb) p c[i].my
+[?2004l[36m$20[m = 2028
+[?2004h(gdb) n
+[?2004l46	            [01mprintf[m[31m([m[31m"Car ID: %d[m[35m\n[m[31mModel name: %s[m[35m\n[m[31mManufacture year(after 2022): %d[m[35m\n[m[31mPrice: %.2f[m[35m\n[m[31m"[m[31m,[mc[31m[[mi[31m].[mcid[31m,[mc[31m[[mi[31m].[mmn[31m,[mc[31m[[mi[31m].[mmy[31m,[mc[31m[[mi[31m].[mp[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lCar ID: 2
+Model name: harrier
+Manufacture year(after 2022): 2028
+Price: 2200000.00
+47	            f[31m=[m[35m1[m[31m;[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l44	    [01;34mfor[m[31m([m[32mint[m i[31m=[m[35m0[m[31m;[mi[31m<[mx[31m;[mi[31m++)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l45	        [01;34mif[m[31m([mc[31m[[mi[31m].[mmy[31m>[m[35m2022[m[31m)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) p c[]i[K[Ki[[K].my
+[?2004l[36m$21[m = 2025
+[?2004h(gdb) n
+[?2004l46	            [01mprintf[m[31m([m[31m"Car ID: %d[m[35m\n[m[31mModel name: %s[m[35m\n[m[31mManufacture year(after 2022): %d[m[35m\n[m[31mPrice: %.2f[m[35m\n[m[31m"[m[31m,[mc[31m[[mi[31m].[mcid[31m,[mc[31m[[mi[31m].[mmn[31m,[mc[31m[[mi[31m].[mmy[31m,[mc[31m[[mi[31m].[mp[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lCar ID: 3
+Model name: victoris
+Manufacture year(after 2022): 2025
+Price: 2000000.00
+47	            f[31m=[m[35m1[m[31m;[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l44	    [01;34mfor[m[31m([m[32mint[m i[31m=[m[35m0[m[31m;[mi[31m<[mx[31m;[mi[31m++)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l45	        [01;34mif[m[31m([mc[31m[[mi[31m].[mmy[31m>[m[35m2022[m[31m)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) p c[i].my
+[?2004l[36m$22[m = 2020
+[?2004h(gdb) n
+[?2004l44	    [01;34mfor[m[31m([m[32mint[m i[31m=[m[35m0[m[31m;[mi[31m<[mx[31m;[mi[31m++)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l50	    [01;34mif[m[31m([mf[31m==[m[35m0[m[31m)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l53	[31m}[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l[33mmain[m () at [32masg4.c[m:27
+27	    [01;34mreturn[m [35m0[m[31m;[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l28	[31m}[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l[33m__libc_start_call_main[m ([36mmain=main@entry[m=0x5555555551a9 <main>, [36margc=argc@entry[m=1, [36margv=argv@entry[m=0x7fffffffd9c8)
+    at [32m../sysdeps/nptl/libc_start_call_main.h[m:74
+warning: 74	[32m../sysdeps/nptl/libc_start_call_main.h[m: No such file or directory
+[?2004h[?2004l[?2004h(gdb) q
+[?2004l[?2004hA debugging session is active.
+
+	Inferior 1 [process 21277] will be killed.
+
+Quit anyway? (y or n) y
+[?2004l[?2004h]0;pavantej@pavantej-VivoBook-ASUSLaptop-X509FA-X509FA: ~/acp2026/level1[01;32mpavantej@pavantej-VivoBook-ASUSLaptop-X509FA-X509FA[00m:[01;34m~/acp2026/level1[00m$ exit
+[?2004lexit
+
+Script done on 2026-03-27 11:50:51+05:30 [COMMAND_EXIT_CODE="0"]
