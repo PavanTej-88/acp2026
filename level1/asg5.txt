@@ -1,0 +1,202 @@
+Script started on 2026-03-27 12:11:09+05:30 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="147" LINES="19"]
+[?2004h]0;pavantej@pavantej-VivoBook-ASUSLaptop-X509FA-X509FA: ~/acp2026/level1[01;32mpavantej@pavantej-VivoBook-ASUSLaptop-X509FA-X509FA[00m:[01;34m~/acp2026/level1[00m$ gcc -g asg5.c -o asg5
+[?2004l[?2004h]0;pavantej@pavantej-VivoBook-ASUSLaptop-X509FA-X509FA: ~/acp2026/level1[01;32mpavantej@pavantej-VivoBook-ASUSLaptop-X509FA-X509FA[00m:[01;34m~/acp2026/level1[00m$ gdb asg5
+[?2004l[35;1mGNU gdb (Ubuntu 15.1-1ubuntu1~24.04.1) 15.1[m
+Copyright (C) 2024 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <[32mhttp://gnu.org/licenses/gpl.html[m>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+[32m<https://www.gnu.org/software/gdb/bugs/>[m.
+Find the GDB manual and other documentation resources online at:
+    <[32mhttp://www.gnu.org/software/gdb/documentation/[m>.
+
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from [32masg5[m...
+[?2004h(gdb) b main
+[?2004lBreakpoint 1 at [34m0x11d5[m: file [32masg5.c[m, line 19.
+[?2004h(gdb) r
+[?2004lStarting program: [32m/home/pavantej/acp2026/level1/asg5[m 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "[32m/lib/x86_64-linux-gnu/libthread_db.so.1[m".
+
+Breakpoint 1, [33mmain[m () at [32masg5.c[m:19
+19	[32mint[m [01mmain[m[31m()[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l21	    [01mprintf[m[31m([m[31m"Enter details of person 1[m[35m\n[m[31m"[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lEnter details of person 1
+22	    [01mread_person[m[31m(&[mp1[31m);[m
+[?2004h[?2004l[?2004h(gdb) s
+[?2004l[33mread_person[m ([36mp[m=0x7fffffffd820) at [32masg5.c[m:39
+39	    [01mprintf[m[31m([m[31m"Enter person name: "[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l40	    [01mscanf[m[31m([m[31m"%49s"[m[31m,((*[mp[31m).[mn[31m));[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lEnter person name: name1
+41	    [01mprintf[m[31m([m[31m"Enter person age: "[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) p *p.n
+[?2004l[36m$1[m = 110 'n'
+[?2004h(gdb) p (*P[Kp).n
+[?2004l[36m$2[m = "name1\000\000\000\000\000\004\000\000\000\000\000\000\200\000\000\000\000\000\000h\330\377\377\377\177\000\000\006\000\000\000\216", '\000' <repeats 12 times>
+[?2004h(gdb) n
+[?2004l42	    [01mscanf[m[31m([m[31m"%d"[m[31m,&((*[mp[31m).[mage[31m));[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lEnter person age: 22
+43	[31m}[m
+[?2004h[?2004l[?2004h(gdb) p (*p).age
+[?2004l[36m$3[m = 22
+[?2004h(gdb) n
+[?2004l[33mmain[m () at [32masg5.c[m:23
+23	    [01mprintf[m[31m([m[31m"Enter details of person 2[m[35m\n[m[31m"[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lEnter details of person 2
+24	    [01mread_person[m[31m(&[mp2[31m);[m
+[?2004h[?2004l[?2004h(gdb) s
+[?2004l[33mread_person[m ([36mp[m=0x7fffffffd860) at [32masg5.c[m:39
+39	    [01mprintf[m[31m([m[31m"Enter person name: "[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l40	    [01mscanf[m[31m([m[31m"%49s"[m[31m,((*[mp[31m).[mn[31m));[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lEnter person name: name2
+41	    [01mprintf[m[31m([m[31m"Enter person age: "[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) p (*p.n)
+[?2004l[36m$4[m = 110 'n'
+[?2004h(gdb) p (*p.n)[C[C[K).n
+[?2004l[36m$5[m = "name2", '\000' <repeats 35 times>, "\360Z\376\367\377\177\000\000\200", <incomplete sequence \331>
+[?2004h(gdb) n
+[?2004l42	    [01mscanf[m[31m([m[31m"%d"[m[31m,&((*[mp[31m).[mage[31m));[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lEnter person age: 45
+43	[31m}[m
+[?2004h[?2004l[?2004h(gdb) p (8[K([K*p.[K).age
+[?2004l[36m$6[m = 45
+[?2004h(gdb) n
+[?2004l[33mmain[m () at [32masg5.c[m:25
+25	    [01mprintf[m[31m([m[31m"Structures before swapping[m[35m\n[m[31m"[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lStructures before swapping
+26	    [01mprintf[m[31m([m[31m"Person 1[m[35m\n[m[31m"[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lPerson 1
+27	    [01mprint_person[m[31m(&[mp1[31m);[m
+[?2004h[?2004l[?2004h(gdb) s
+[?2004l[33mprint_person[m ([36mp[m=0x7fffffffd820) at [32masg5.c[m:45
+45	    [01mprintf[m[31m([m[31m"Name: %s[m[35m\n[m[31m"[m[31m,((*[mp[31m).[mn[31m));[m
+[?2004h[?2004l[?2004h(gdb) p (*p).n
+[?2004l[36m$7[m = "name1\000\000\000\000\000\004\000\000\000\000\000\000\200\000\000\000\000\000\000h\330\377\377\377\177\000\000\006\000\000\000\216", '\000' <repeats 12 times>
+[?2004h(gdb) n
+[?2004lName: name1
+46	    [01mprintf[m[31m([m[31m"Age: %d[m[35m\n[m[31m"[m[31m,((*[mp[31m).[mage[31m));[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lAge: 22
+47	[31m}[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l[33mmain[m () at [32masg5.c[m:28
+28	    [01mprintf[m[31m([m[31m"Person 2[m[35m\n[m[31m"[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lPerson 2
+29	    [01mprint_person[m[31m(&[mp2[31m);[m
+[?2004h[?2004l[?2004h(gdb) s
+[?2004l[33mprint_person[m ([36mp[m=0x7fffffffd860) at [32masg5.c[m:45
+45	    [01mprintf[m[31m([m[31m"Name: %s[m[35m\n[m[31m"[m[31m,((*[mp[31m).[mn[31m));[m
+[?2004h[?2004l[?2004h(gdb) p (*)[Kp).n
+[?2004l[36m$8[m = "name2", '\000' <repeats 35 times>, "\360Z\376\367\377\177\000\000\200", <incomplete sequence \331>
+[?2004h(gdb) n
+[?2004lName: name2
+46	    [01mprintf[m[31m([m[31m"Age: %d[m[35m\n[m[31m"[m[31m,((*[mp[31m).[mage[31m));[m
+[?2004h[?2004l[?2004h(gdb) p (*p).age
+[?2004l[36m$9[m = 45
+[?2004h(gdb) n
+[?2004lAge: 45
+47	[31m}[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l[33mmain[m () at [32masg5.c[m:30
+30	    [01mswap_person[m[31m(&[mp1[31m,&[mp2[31m);[m
+[?2004h[?2004l[?2004h(gdb) s
+[?2004l[33mswap_person[m ([36mp1[m=0x7fffffffd820, [36mp2[m=0x7fffffffd860) at [32masg5.c[m:48
+48	[32mvoid[m [01mswap_person[m[31m([mPerson [31m*[mp1[31m,[mPerson [31m*[mp2[31m)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l50	    [01mstrcpy[m[31m([mtemp[31m.[mn[31m,((*[mp1[31m).[mn[31m));[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l51	    [01mstrcpy[m[31m(((*[mp1[31m).[mn[31m),((*[mp2[31m).[mn[31m));[m
+[?2004h[?2004l[?2004h(gdb) p temp.n
+[?2004l[36m$10[m = "name1\000\000\000\020\000\000\000\000\000\000\000\377\377\377\377\377\377\377\377\310\331\377\377\377\177\000\000\020\330\377\377\377\177\000\000\217SUUUU\000\000\240}"
+[?2004h(gdb) n
+[?2004l52	    [01mstrcpy[m[31m(((*[mp2[31m).[mn[31m),[mtemp[31m.[mn[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l53	    temp[31m.[mage[31m=(*[mp1[31m).[mage[31m;[m
+[?2004h[?2004l[?2004h(gdb) n[Kp temp.age
+[?2004l[36m$11[m = 21845
+[?2004h(gdb) n
+[?2004l54	    [31m(*[mp1[31m).[mage[31m=(*[mp2[31m).[mage[31m;[m
+[?2004h[?2004l[?2004h(gdb) np temp.age
+[?2004l[36m$12[m = 22
+[?2004h(gdb) n
+[?2004l55	    [31m(*[mp2[31m).[mage[31m=[mtemp[31m.[mage[31m;[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l56	[31m}[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l[33mmain[m () at [32masg5.c[m:31
+31	    [01mprintf[m[31m([m[31m"Structures after swapping[m[35m\n[m[31m"[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lStructures after swapping
+32	    [01mprintf[m[31m([m[31m"Person 1 details[m[35m\n[m[31m"[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lPerson 1 details
+33	    [01mprint_person[m[31m(&[mp1[31m);[m
+[?2004h[?2004l[?2004h(gdb) s
+[?2004l[33mprint_person[m ([36mp[m=0x7fffffffd820) at [32masg5.c[m:45
+45	    [01mprintf[m[31m([m[31m"Name: %s[m[35m\n[m[31m"[m[31m,((*[mp[31m).[mn[31m));[m
+[?2004h[?2004l[?2004h(gdb) p (*p).n
+[?2004l[36m$13[m = "name2\000\000\000\000\000\004\000\000\000\000\000\000\200\000\000\000\000\000\000h\330\377\377\377\177\000\000\006\000\000\000\216", '\000' <repeats 12 times>
+[?2004h(gdb) n
+[?2004lName: name2
+46	    [01mprintf[m[31m([m[31m"Age: %d[m[35m\n[m[31m"[m[31m,((*[mp[31m).[mage[31m));[m
+[?2004h[?2004l[?2004h(gdb) np (*p).n[C[Kage
+[?2004l[36m$14[m = 45
+[?2004h(gdb) n
+[?2004lAge: 45
+47	[31m}[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l[33mmain[m () at [32masg5.c[m:34
+34	    [01mprintf[m[31m([m[31m"Person 2 details[m[35m\n[m[31m"[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lPerson 2 details
+35	    [01mprint_person[m[31m(&[mp2[31m);[m
+[?2004h[?2004l[?2004h(gdb) s
+[?2004l[33mprint_person[m ([36mp[m=0x7fffffffd860) at [32masg5.c[m:45
+45	    [01mprintf[m[31m([m[31m"Name: %s[m[35m\n[m[31m"[m[31m,((*[mp[31m).[mn[31m));[m
+[?2004h[?2004l[?2004h(gdb) p (*p).n
+[?2004l[36m$15[m = "name1", '\000' <repeats 35 times>, "\360Z\376\367\377\177\000\000\200", <incomplete sequence \331>
+[?2004h(gdb) n
+[?2004lName: name1
+46	    [01mprintf[m[31m([m[31m"Age: %d[m[35m\n[m[31m"[m[31m,((*[mp[31m).[mage[31m));[m
+[?2004h[?2004l[?2004h(gdb) np (*p).n[Kage
+[?2004l[36m$16[m = 22
+[?2004h(gdb) n
+[?2004lAge: 22
+47	[31m}[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l[33mmain[m () at [32masg5.c[m:36
+36	    [01;34mreturn[m [35m0[m[31m;[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l37	[31m}[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l[33m__libc_start_call_main[m ([36mmain=main@entry[m=0x5555555551c9 <main>, [36margc=argc@entry[m=1, [36margv=argv@entry[m=0x7fffffffd9c8)
+    at [32m../sysdeps/nptl/libc_start_call_main.h[m:74
+warning: 74	[32m../sysdeps/nptl/libc_start_call_main.h[m: No such file or directory
+[?2004h[?2004l[?2004h(gdb) q
+[?2004l[?2004hA debugging session is active.
+
+	Inferior 1 [process 30053] will be killed.
+
+Quit anyway? (y or n) y
+[?2004l[?2004h]0;pavantej@pavantej-VivoBook-ASUSLaptop-X509FA-X509FA: ~/acp2026/level1[01;32mpavantej@pavantej-VivoBook-ASUSLaptop-X509FA-X509FA[00m:[01;34m~/acp2026/level1[00m$ exit
+[?2004lexit
+
+Script done on 2026-03-27 12:14:43+05:30 [COMMAND_EXIT_CODE="0"]
