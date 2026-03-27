@@ -92,7 +92,7 @@ int is_digit(char x){
 }
 void display(char *x,int r){
     if(r==1){
-        printf("Valid password\n");
+        printf("Valid password \n");
     }
     else{
         printf("Invalid password\n");
