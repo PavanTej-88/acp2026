@@ -34,20 +34,18 @@ int main(){
 void inputStudents(Student *s,int n){
     for(int i=0;i<n;i++){
         printf("Enter student name: ");
-        scanf("%s",(*s).n);
+        scanf("%s",s[i].n);
         printf("Enter student id: ");
-        scanf("%d",&((*s).sid));
+        scanf("%d",&(s[i].sid));
         printf("Enter student marks: ");
-        scanf("%d",&((*s).m));
+        scanf("%d",&(s[i].m));
     }
 }
 void writeToTextFile(Student *s,int n,const char *f){
     FILE *ptr;
     ptr=fopen(f,"w");
     for(int i=0;i<n;i++){
-        fprintf(ptr,"%s",s[i].n);
-        fprintf(ptr,"%d",&s[i].sid);
-        fprintf(ptr,"%d",s[i].m);
+        fprintf(ptr,"%s %d %d",s[i].n,s[i].sid,s[i].m);
     }
     fclose(ptr);
 }
@@ -55,10 +53,7 @@ int readFromTextFile(Student *s1,const char *f){
     FILE *ptr;
     int i=0;
     ptr=fopen(f,"r");
-    while(ptr!=EOF){
-        fscanf(ptr,"%s",s1[i].n);
-        fscanf(ptr,"%d",&(s1[i].sid));
-        fscanf(ptr,"%d",&(s1[i].m));
+    while((fscanf(ptr,"%s %d %d",s1[i].n,&s1[i].sid,&s1[i].m))==3){
         i++;
     }
     fclose(ptr);
@@ -67,9 +62,10 @@ int readFromTextFile(Student *s1,const char *f){
 void printStudents(Student *s1,int x){
     for(int i=0;i<x;i++){
         printf("Student %d:\n",i+1);
-        printf("Name = %s\n",s1[i].n);
-        printf("id = %d\n",s1[i].sid);
-        printf("Marks = %d\n",s1[i].m);
+        printf("Name\tId\tMarks\n");
+        printf("%s\t",s1[i].n);
+        printf("%d\t",s1[i].sid);
+        printf("%d\n",s1[i].m);
     }
 }
         
