@@ -52,8 +52,9 @@ void writeToTextFile(Employee *e,int n,const char *f){
         exit(-1);
     }
     for(int i=0;i<n;i++){
-        fprintf(ptr,"%d %s %f",e[i].id,e[i].n,e[i].bs);
+        fprintf(ptr,"%d %s %f\n",e[i].id,e[i].n,e[i].bs);
     }
+    fclose(ptr);
 }
 float calculateTotalPayroll(const char *f){
     float tbs;
@@ -68,6 +69,7 @@ float calculateTotalPayroll(const char *f){
     while((fscanf(ptr,"%d %s %f",&id,n,&tbs))==3){
         t = t+tbs;
     }
+    fclose(ptr);
     return t;
 }
 void displayExpenditure(float t){
