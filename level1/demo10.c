@@ -31,7 +31,7 @@ int main(){
     inputStudents(s,n);
     writeToBinaryFile(s,n,"students.bin");
     Student s1[n];
-    int x=readFromBinaryFile(s1,n,"students.bin");
+    int x=readFromBinaryFile(s1,"students.bin");
     printStudents(s1,x);
     return 0;
 }
