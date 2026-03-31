@@ -41,7 +41,7 @@ void inputProducts(Product *p,int n){
         printf("ID: ");
         scanf("%d",&p[i].id);
         printf("Name: ");
-        scanf("%s",p[i].n);
+        scanf("%49s",p[i].n);
         printf("Price: ");
         scanf("%f",&p[i].price);
     }
@@ -53,7 +53,7 @@ void saveToFile(Product *p,int n,const char *f){
         exit(-1);
     }
     for(int i=0;i<n;i++){
-        fprintf(ptr,"%d %s %f\n",p[i].id,p[i].n,p[i].price);
+        fprintf(ptr,"%d %s %.2f\n",p[i].id,p[i].n,p[i].price);
     }
     fclose(ptr);
 }
@@ -67,7 +67,7 @@ float calculateTotalValue(const char *f){
         printf("Error cannot open file\n");
         exit(-1);
     }
-    while((fscanf(ptr,"%d %s %f",&id,n,&price))==3){
+    while((fscanf(ptr,"%d %49s %f",&id,n,&price))==3){
         t=t+price;
     }
     fclose(ptr);
