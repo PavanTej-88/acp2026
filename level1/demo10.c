@@ -30,7 +30,7 @@ int main(){
     Student s[n];
     inputStudents(s,n);
     writeToBinaryFile(s,n,"students.bin");
-    Student s1[n];
+    Student s1[mi];
     int x=readFromBinaryFile(s1,"students.bin");
     printStudents(s1,x);
     return 0;
@@ -41,7 +41,7 @@ void inputStudents(Student *s,int n){
         printf("ID: ");
         scanf("%d",&s[i].id);
         printf("Name: ");
-        scanf("%s",s[i].n);
+        scanf("%49s",s[i].n);
         printf("Marks: ");
         scanf("%d",&s[i].m);
     }
