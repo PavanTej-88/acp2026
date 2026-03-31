@@ -55,6 +55,7 @@ void saveToFile(Product *p,int n,const char *f){
     for(int i=0;i<n;i++){
         fprintf(ptr,"%d %s %f\n",p[i].id,p[i].n,p[i].price);
     }
+    fclose(ptr);
 }
 float calculateTotalValue(const char *f){
     int id;
@@ -69,6 +70,7 @@ float calculateTotalValue(const char *f){
     while((fscanf(ptr,"%d %s %f",&id,n,&price))==3){
         t=t+price;
     }
+    fclose(ptr);
     return t;
 }
 void displayTotalValue(float t){
