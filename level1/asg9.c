@@ -60,7 +60,7 @@ float calculateTotalValue(const char *f){
     int id;
     char n[50];
     float price;
-    float t;
+    float t=0;
     FILE *ptr=fopen(f,"r");
     if(ptr==NULL){
         printf("Error cannot open file\n");
