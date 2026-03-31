@@ -9,6 +9,7 @@ Function Prototypes:
     • float calculateTotalPayroll(const char *filename);
     • void displayExpenditure(float total);*/
 #include<stdio.h>
+#include<stdlib.h>
 typedef struct{
     int id;
     char n[50];
