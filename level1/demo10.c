@@ -52,7 +52,7 @@ void writeToBinaryFile(Student *s,int n,const char *f){
         printf("Error opening file\n");
         exit(-1);
     }
-    fwrite(s,sizeof(s),n,ptr);
+    fwrite(s,sizeof(Student),n,ptr);
     fclose(ptr);
 }
 int readFromBinaryFile(Student *s1, const char *f){
@@ -61,16 +61,16 @@ int readFromBinaryFile(Student *s1, const char *f){
         printf("Error opening file\n");
         exit(-1);
     }
-    int size=fread(s1,sizeof(s1),mi,ptr);
+    int size=fread(s1,sizeof(Student),mi,ptr);
     fclose(ptr);
     return size;
 }
 void printStudents(Student *s1,int x){
     for(int i=0;i<x;i++){
         printf("Student %d details:\n",i+1);
+        printf("ID: %d\n",s1[i].id);
         printf("Name: %s\n",s1[i].n);
-        printf("Name: %d\n",s1[i].id);
-        printf("Name: %d\n",s1[i].m);
+        printf("Marks: %d\n",s1[i].m);
     }
 }
 
