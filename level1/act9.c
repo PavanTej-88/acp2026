@@ -59,8 +59,8 @@ float calculateTotalPayroll(const char *f){
     float tbs;
     int id;
     char n[50];
-    float t;
-    FILE *ptr=fopen(f,"r")
+    float t=0;
+    FILE *ptr=fopen(f,"r");
     if(ptr==NULL){
         printf("Error cannot open file\n");
         exit(-1);
