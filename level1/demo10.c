@@ -9,6 +9,7 @@ void writeToBinaryFile(Student students[], int n, const char *filename);
 int readFromBinaryFile(Student students[], const char *filename);
 void printStudents(Student students[], int n);*/
 #include<stdio.h>
+#include<stdlib.h>
 #define mi 50
 typedef struct{
     int id,m;
@@ -28,9 +29,9 @@ int main(){
     }
     Student s[n];
     inputStudents(s,n);
-    writeToBinary(s,n,"students.bin");
+    writeToBinaryFile(s,n,"students.bin");
     Student s1[n];
-    int x=readFrombinary(s1,n,"students.bin");
+    int x=readFromBinaryFile(s1,n,"students.bin");
     printStudents(s1,x);
     return 0;
 }
@@ -45,7 +46,7 @@ void inputStudents(Student *s,int n){
         scanf("%d",&s[i].m);
     }
 }
-void writeToBinary(Student *s,int n,const char *f){
+void writeToBinaryFile(Student *s,int n,const char *f){
     FILE *ptr=fopen(f,"wb");
     if(ptr==NULL){
         printf("Error opening file\n");
@@ -54,7 +55,7 @@ void writeToBinary(Student *s,int n,const char *f){
     fwrite(s,sizeof(s),n,ptr);
     fclose(ptr);
 }
-int readFromBinary(Student *s1, const char *f){
+int readFromBinaryFile(Student *s1, const char *f){
     FILE *ptr=fopen(f,"rb");
     if(ptr==NULL){
         printf("Error opening file\n");
