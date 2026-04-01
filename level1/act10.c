@@ -65,7 +65,7 @@ Flight findMostExpensive(const char *s){
     }
     Flight k[mi];
     int i=0,m=0;
-    while((fread(k[i],sizeof(Flight),1,ptr))==1){
+    while((fread(&k[i],sizeof(Flight),1,ptr))==1){
         if(k[i].tp>k[m].tp){
             m=i;
         }
