@@ -74,7 +74,8 @@ Flight findMostExpensive(const char *s){
     return k[m];
 }
 void displayTopFlight(Flight f){
-    printf("The flight %d has highest price %f\n",f.fn,f.tp);
+    printf("------Flight with highest ticket price:------\n");
+    printf("The flight %d to %s has highest price %.2f\n",f.fn,f.d,f.tp);
 }
 
 
