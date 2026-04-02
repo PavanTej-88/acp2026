@@ -13,12 +13,12 @@ Function Prototypes:
 typedef struct{
     int id;
     char n[50];
-    float bs;
+    double bs;
 }Employee;
 void inputEmployees(Employee e[], int n);
 void writeToTextFile(Employee e[], int n, const char *filename);
-float calculateTotalPayroll(const char *filename);
-void displayExpenditure(float total);
+double calculateTotalPayroll(const char *filename);
+void displayExpenditure(double total);
 int main(){
     int n;
     printf("Enter number of employees: ");
@@ -30,7 +30,7 @@ int main(){
     Employee e[n];
     inputEmployees(e,n);
     writeToTextFile(e,n,"payroll.txt");
-    float tpy=calculateTotalPayroll("payroll.txt");
+    double   tpy=calculateTotalPayroll("payroll.txt");
     displayExpenditure(tpy);
     return 0;
 }
@@ -42,7 +42,7 @@ void inputEmployees(Employee *e,int n){
         printf("Enter employee name: ");
         scanf("%s",e[i].n);
         printf("Enter employee basic salary: ");
-        scanf("%f",&e[i].bs);
+        scanf("%lf",&e[i].bs);
     }
 }
 void writeToTextFile(Employee *e,int n,const char *f){
@@ -52,28 +52,28 @@ void writeToTextFile(Employee *e,int n,const char *f){
         exit(-1);
     }
     for(int i=0;i<n;i++){
-        fprintf(ptr,"%d %s %.2f\n",e[i].id,e[i].n,e[i].bs);
+        fprintf(ptr,"%d %s %.2lf\n",e[i].id,e[i].n,e[i].bs);
     }
     fclose(ptr);
 }
-float calculateTotalPayroll(const char *f){
-    float tbs;
+double calculateTotalPayroll(const char *f){
+    double tbs;
     int id;
     char n[50];
-    float t=0;
+    double t=0;
     FILE *ptr=fopen(f,"r");
     if(ptr==NULL){
         printf("Error cannot open file\n");
         exit(-1);
     }
-    while((fscanf(ptr,"%d %s %f",&id,n,&tbs))==3){
+    while((fscanf(ptr,"%d %s %lf",&id,n,&tbs))==3){
         t = t+tbs;
     }
     fclose(ptr);
     return t;
 }
-void displayExpenditure(float t){
-    printf("Total expenditure = %.2f\n",t);
+void displayExpenditure(double t){
+    printf("Total expenditure = %.2lf\n",t);
 }
 
 
