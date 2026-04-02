@@ -52,7 +52,7 @@ void writeToTextFile(Employee *e,int n,const char *f){
         exit(-1);
     }
     for(int i=0;i<n;i++){
-        fprintf(ptr,"%d %s %f\n",e[i].id,e[i].n,e[i].bs);
+        fprintf(ptr,"%d %s %.2f\n",e[i].id,e[i].n,e[i].bs);
     }
     fclose(ptr);
 }
