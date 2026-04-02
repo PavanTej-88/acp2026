@@ -5,9 +5,9 @@
 @test "1: Single employee payroll" {
   run ./act9 <<EOF
 1
-101 Alice 50000.50
+101 Alice 50000.60
 EOF
-  [[ "$output" == *"Total expenditure = 50000.50"* ]]
+  [[ "$output" == *"Total expenditure = 50000.60"* ]]
   [ -f payroll.txt ]
 }
 
