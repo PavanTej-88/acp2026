@@ -1,0 +1,252 @@
+Script started on 2026-04-02 14:34:46+05:30 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="127" LINES="32"]
+[?2004h]0;pavantej@pavantej-VivoBook-ASUSLaptop-X509FA-X509FA: ~/acp2026/level1[01;32mpavantej@pavantej-VivoBook-ASUSLaptop-X509FA-X509FA[00m:[01;34m~/acp2026/level1[00m$ gcc -g act9.c -o act9
+[?2004l[?2004h]0;pavantej@pavantej-VivoBook-ASUSLaptop-X509FA-X509FA: ~/acp2026/level1[01;32mpavantej@pavantej-VivoBook-ASUSLaptop-X509FA-X509FA[00m:[01;34m~/acp2026/level1[00m$ gdb act9
+[?2004l[35;1mGNU gdb (Ubuntu 15.1-1ubuntu1~24.04.1) 15.1[m
+Copyright (C) 2024 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <[32mhttp://gnu.org/licenses/gpl.html[m>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+[32m<https://www.gnu.org/software/gdb/bugs/>[m.
+Find the GDB manual and other documentation resources online at:
+    <[32mhttp://www.gnu.org/software/gdb/documentation/[m>.
+
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from [32mact9[m...
+[?2004h(gdb) b main
+[?2004lBreakpoint 1 at [34m0x1256[m: file [32mact9.c[m, line 22.
+[?2004h(gdb) r
+[?2004lStarting program: [32m/home/pavantej/acp2026/level1/act9[m 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "[32m/lib/x86_64-linux-gnu/libthread_db.so.1[m".
+
+Breakpoint 1, [33mmain[m () at [32mact9.c[m:22
+22	[32mint[m [01mmain[m[31m()[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l24	    [01mprintf[m[31m([m[31m"Enter number of employees: "[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l25	    [01mscanf[m[31m([m[31m"%d"[m[31m,&[mn[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lEnter number of employees: 2 3
+26	    [01;34mif[m[31m([mn[31m<=[m[35m0[m[31m)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l30	    Employee e[31m[[mn[31m];[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l31	    [01minputEmployees[m[31m([me[31m,[mn[31m);[m
+[?2004h[?2004l[?2004h(gdb) s
+[?2004l[33minputEmployees[m ([36me[m=0x7fffffffd7b0, [36mn[m=3) at [32mact9.c[m:38
+38	    [01;34mfor[m[31m([m[32mint[m i[31m=[m[35m0[m[31m;[mi[31m<[mn[31m;[mi[31m++)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l39	        [01mprintf[m[31m([m[31m"Enter employee %d details[m[35m\n[m[31m"[m[31m,[mi[31m+[m[35m1[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lEnter employee 1 details
+40	        [01mprintf[m[31m([m[31m"Enter employee id: "[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l41	        [01mscanf[m[31m([m[31m"%d"[m[31m,&[me[31m[[mi[31m].[mid[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lEnter employee id: 1
+42	        [01mprintf[m[31m([m[31m"Enter employee name: "[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) p e[i].id
+[?2004l[36m$1[m = 1
+[?2004h(gdb) n
+[?2004l43	        [01mscanf[m[31m([m[31m"%s"[m[31m,[me[31m[[mi[31m].[mn[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lEnter employee name: a
+44	        [01mprintf[m[31m([m[31m"Enter employee basic salary: "[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) p e[i].n
+[?2004l[36m$2[m = "a\000\000\000p\330\377\377\377\177", '\000' <repeats 18 times>, " ;\340\367\377\177\000\000\020\004\000\000\000\000\000\000\377\377\377\377\377\377"
+[?2004h(gdb) n
+[?2004l45	        [01mscanf[m[31m([m[31m"%f"[m[31m,&[me[31m[[mi[31m].[mbs[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lEnter employee basic salary: 1234
+38	    [01;34mfor[m[31m([m[32mint[m i[31m=[m[35m0[m[31m;[mi[31m<[mn[31m;[mi[31m++)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) p e[i].bs
+[?2004l[36m$3[m = 1234
+[?2004h(gdb) n
+[?2004l39	        [01mprintf[m[31m([m[31m"Enter employee %d details[m[35m\n[m[31m"[m[31m,[mi[31m+[m[35m1[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lEnter employee 2 details
+40	        [01mprintf[m[31m([m[31m"Enter employee id: "[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l41	        [01mscanf[m[31m([m[31m"%d"[m[31m,&[me[31m[[mi[31m].[mid[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lEnter employee id: 2
+42	        [01mprintf[m[31m([m[31m"Enter employee name: "[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) p e[i].id
+[?2004l[36m$4[m = 2
+[?2004h(gdb) n
+[?2004l43	        [01mscanf[m[31m([m[31m"%s"[m[31m,[me[31m[[mi[31m].[mn[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lEnter employee name: b
+44	        [01mprintf[m[31m([m[31m"Enter employee basic salary: "[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) p r[Ke[i].n
+[?2004l[36m$5[m = "b\000\000\000\000\000\000\000\000\000 \000\000\000\000\000\000\b\000\000\000\000\000\000\000\000 \000\000\000\000\000\000\200\000\000\000\000\000\000\000\000@\000\000\000\000\000\000"
+[?2004h(gdb) n
+[?2004l45	        [01mscanf[m[31m([m[31m"%f"[m[31m,&[me[31m[[mi[31m].[mbs[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lEnter employee basic salary: 2345
+38	    [01;34mfor[m[31m([m[32mint[m i[31m=[m[35m0[m[31m;[mi[31m<[mn[31m;[mi[31m++)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) p r[Ke[i].bs
+[?2004l[36m$6[m = 2345
+[?2004h(gdb) n
+[?2004l39	        [01mprintf[m[31m([m[31m"Enter employee %d details[m[35m\n[m[31m"[m[31m,[mi[31m+[m[35m1[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lEnter employee 3 details
+40	        [01mprintf[m[31m([m[31m"Enter employee id: "[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l41	        [01mscanf[m[31m([m[31m"%d"[m[31m,&[me[31m[[mi[31m].[mid[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lEnter employee id: 3
+42	        [01mprintf[m[31m([m[31m"Enter employee name: "[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) p r[Ke[i].id
+[?2004l[36m$7[m = 3
+[?2004h(gdb) n
+[?2004l43	        [01mscanf[m[31m([m[31m"%s"[m[31m,[me[31m[[mi[31m].[mn[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lEnter employee name: v c
+44	        [01mprintf[m[31m([m[31m"Enter employee basic salary: "[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) p e[i].n
+[?2004l[36m$8[m = "c\000\000\000\000\200\000\000\000\000\000\000h\330\377\377\377\177\000\000\006\000\000\000\216", '\000' <repeats 24 times>
+[?2004h(gdb) n
+[?2004l45	        [01mscanf[m[31m([m[31m"%f"[m[31m,&[me[31m[[mi[31m].[mbs[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lEnter employee basic salary: 3456
+38	    [01;34mfor[m[31m([m[32mint[m i[31m=[m[35m0[m[31m;[mi[31m<[mn[31m;[mi[31m++)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) p e[i].bs
+[?2004l[36m$9[m = 3456
+[?2004h(gdb) n
+[?2004l47	[31m}[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l[33mmain[m () at [32mact9.c[m:32
+32	    [01mwriteToTextFile[m[31m([me[31m,[mn[31m,[m[31m"payroll.txt"[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) s
+[?2004l[33mwriteToTextFile[m ([36me[m=0x7fffffffd7b0, [36mn[m=3, [36mf[m=0x555555556032 "payroll.txt") at [32mact9.c[m:49
+49	    FILE [31m*[mptr[31m=[m[01mfopen[m[31m([mf[31m,[m[31m"w"[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l50	    [01;34mif[m[31m([mptr[31m==[mNULL[31m)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l54	    [01;34mfor[m[31m([m[32mint[m i[31m=[m[35m0[m[31m;[mi[31m<[mn[31m;[mi[31m++)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) p ptr
+[?2004l[36m$10[m = (FILE *[36m[m) [34m0x555555559ac0[m
+[?2004h(gdb) n
+[?2004l55	        [01mfprintf[m[31m([mptr[31m,[m[31m"%d %s %f[m[35m\n[m[31m"[m[31m,[me[31m[[mi[31m].[mid[31m,[me[31m[[mi[31m].[mn[31m,[me[31m[[mi[31m].[mbs[31m);[m
+[?2004h[?2004l[?2004h(gdb) p e[i].id
+[?2004l[36m$11[m = 1
+[?2004h(gdb) p e[i].id[K[Kn
+[?2004l[36m$12[m = "a\000\000\000p\330\377\377\377\177", '\000' <repeats 18 times>, " ;\340\367\377\177\000\000\020\004\000\000\000\000\000\000\377\377\377\377\377\377"
+[?2004h(gdb) p e[i].nid[K[Kbs
+[?2004l[36m$13[m = 1234
+[?2004h(gdb) n
+[?2004l54	    [01;34mfor[m[31m([m[32mint[m i[31m=[m[35m0[m[31m;[mi[31m<[mn[31m;[mi[31m++)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l55	        [01mfprintf[m[31m([mptr[31m,[m[31m"%d %s %f[m[35m\n[m[31m"[m[31m,[me[31m[[mi[31m].[mid[31m,[me[31m[[mi[31m].[mn[31m,[me[31m[[mi[31m].[mbs[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l54	    [01;34mfor[m[31m([m[32mint[m i[31m=[m[35m0[m[31m;[mi[31m<[mn[31m;[mi[31m++)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l55	        [01mfprintf[m[31m([mptr[31m,[m[31m"%d %s %f[m[35m\n[m[31m"[m[31m,[me[31m[[mi[31m].[mid[31m,[me[31m[[mi[31m].[mn[31m,[me[31m[[mi[31m].[mbs[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l54	    [01;34mfor[m[31m([m[32mint[m i[31m=[m[35m0[m[31m;[mi[31m<[mn[31m;[mi[31m++)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l57	    [01mfclose[m[31m([mptr[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l58	[31m}[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l[33mmain[m () at [32mact9.c[m:33
+33	    [32mfloat[m tpy[31m=[m[01mcalculateTotalPayroll[m[31m([m[31m"payroll.txt"[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) s
+[?2004l[33mcalculateTotalPayroll[m ([36mf[m=0x555555556032 "payroll.txt") at [32mact9.c[m:59
+59	[32mfloat[m [01mcalculateTotalPayroll[m[31m([m[01;34mconst[m [32mchar[m [31m*[mf[31m)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l63	    [32mfloat[m t[31m=[m[35m0[m[31m;[m
+[?2004h[?2004l[?2004h(gdb) n[Kp [K[Kn
+[?2004l64	    FILE [31m*[mptr[31m=[m[01mfopen[m[31m([mf[31m,[m[31m"r"[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) [[Kp t
+[?2004l[36m$14[m = 0
+[?2004h(gdb) p ptr
+[?2004l[36m$15[m = (FILE *[36m[m) [34m0x0[m
+[?2004h(gdb) n
+[?2004l65	    [01;34mif[m[31m([mptr[31m==[mNULL[31m)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l69	    [01;34mwhile[m[31m(([m[01mfscanf[m[31m([mptr[31m,[m[31m"%d %s %f"[m[31m,&[mid[31m,[mn[31m,&[mtbs[31m))==[m[35m3[m[31m)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) p ptr
+[?2004l[36m$16[m = (FILE *[36m[m) [34m0x555555559ac0[m
+[?2004h(gdb) n[Kp id
+[?2004l[36m$17[m = 1
+[?2004h(gdb) p n
+[?2004l[36m$18[m = "\240\327\377\377\377\177\000\000jVUUUU\000\000\240\327\377\377\377\177\000\0002`UUUU\000\000`\330\377\377\003\000\000\000\260\327\377\377\377\177\000\000\b"
+[?2004h(gdb) p tbs
+[?2004l[36m$19[m = 4.59163468e-41
+[?2004h(gdb) n
+[?2004l70	        t [31m=[m t[31m+[mtbs[31m;[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l69	    [01;34mwhile[m[31m(([m[01mfscanf[m[31m([mptr[31m,[m[31m"%d %s %f"[m[31m,&[mid[31m,[mn[31m,&[mtbs[31m))==[m[35m3[m[31m)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) p id
+[?2004l[36m$20[m = 1
+[?2004h(gdb) p n
+[?2004l[36m$21[m = "a\000\377\377\377\177\000\000jVUUUU\000\000\240\327\377\377\377\177\000\0002`UUUU\000\000`\330\377\377\003\000\000\000\260\327\377\377\377\177\000\000\b"
+[?2004h(gdb) p tbs
+[?2004l[36m$22[m = 1234
+[?2004h(gdb) n
+[?2004l70	        t [31m=[m t[31m+[mtbs[31m;[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l69	    [01;34mwhile[m[31m(([m[01mfscanf[m[31m([mptr[31m,[m[31m"%d %s %f"[m[31m,&[mid[31m,[mn[31m,&[mtbs[31m))==[m[35m3[m[31m)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) p id
+[?2004l[36m$23[m = 2
+[?2004h(gdb) p n
+[?2004l[36m$24[m = "b\000\377\377\377\177\000\000jVUUUU\000\000\240\327\377\377\377\177\000\0002`UUUU\000\000`\330\377\377\003\000\000\000\260\327\377\377\377\177\000\000\b"
+[?2004h(gdb) p tbs
+[?2004l[36m$25[m = 2345
+[?2004h(gdb) n
+[?2004l70	        t [31m=[m t[31m+[mtbs[31m;[m
+[?2004h[?2004l[?2004h(gdb) 
+[?2004l69	    [01;34mwhile[m[31m(([m[01mfscanf[m[31m([mptr[31m,[m[31m"%d %s %f"[m[31m,&[mid[31m,[mn[31m,&[mtbs[31m))==[m[35m3[m[31m)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l72	    [01mfclose[m[31m([mptr[31m);[m
+[?2004h[?2004l[?2004h(gdb) p id
+[?2004l[36m$26[m = 3
+[?2004h(gdb) p  [Kn
+[?2004l[36m$27[m = "c\000\377\377\377\177\000\000jVUUUU\000\000\240\327\377\377\377\177\000\0002`UUUU\000\000`\330\377\377\003\000\000\000\260\327\377\377\377\177\000\000\b"
+[?2004h(gdb) p tbs
+[?2004l[36m$28[m = 3456
+[?2004h(gdb) p t
+[?2004l[36m$29[m = 7035
+[?2004h(gdb) n
+[?2004l73	    [01;34mreturn[m t[31m;[m
+[?2004h[?2004l[?2004h(gdb) p t
+[?2004l[36m$30[m = 7035
+[?2004h(gdb) n
+[?2004l74	[31m}[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l[33mmain[m () at [32mact9.c[m:34
+34	    [01mdisplayExpenditure[m[31m([mtpy[31m);[m
+[?2004h[?2004l[?2004h(gdb) s
+[?2004l[33mdisplayExpenditure[m ([36mt[m=7035) at [32mact9.c[m:76
+76	    [01mprintf[m[31m([m[31m"Total expenditure = %.2f[m[35m\n[m[31m"[m[31m,[mt[31m);[m
+[?2004h[?2004l[?2004h(gdb) p t
+[?2004l[36m$31[m = 7035
+[?2004h(gdb) n
+[?2004lTotal expenditure = 7035.00
+77	[31m}[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l[33mmain[m () at [32mact9.c[m:35
+35	    [01;34mreturn[m [35m0[m[31m;[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l36	[31m}[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l[33m__libc_start_call_main[m ([36mmain=main@entry[m=0x555555555249 <main>, [36margc=argc@entry[m=1, [36margv=argv@entry[m=0x7fffffffd9c8)
+    at [32m../sysdeps/nptl/libc_start_call_main.h[m:74
+warning: 74	[32m../sysdeps/nptl/libc_start_call_main.h[m: No such file or directory
+[?2004h[?2004l[?2004h(gdb) q
+[?2004l[?2004hA debugging session is active.
+
+	Inferior 1 [process 5091] will be killed.
+
+Quit anyway? (y or n) y
+[?2004l[?2004h]0;pavantej@pavantej-VivoBook-ASUSLaptop-X509FA-X509FA: ~/acp2026/level1[01;32mpavantej@pavantej-VivoBook-ASUSLaptop-X509FA-X509FA[00m:[01;34m~/acp2026/level1[00m$ exit
+[?2004lexit
+
+Script done on 2026-04-02 14:39:50+05:30 [COMMAND_EXIT_CODE="0"]
