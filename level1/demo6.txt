@@ -1,0 +1,169 @@
+Script started on 2026-04-02 15:36:13+05:30 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="147" LINES="37"]
+[?2004h]0;pavantej@pavantej-VivoBook-ASUSLaptop-X509FA-X509FA: ~/acp2026/level1[01;32mpavantej@pavantej-VivoBook-ASUSLaptop-X509FA-X509FA[00m:[01;34m~/acp2026/level1[00m$ gcc demo6.[K[K[K[K[K[K-g demo6.c -o demo6
+[?2004l[?2004h]0;pavantej@pavantej-VivoBook-ASUSLaptop-X509FA-X509FA: ~/acp2026/level1[01;32mpavantej@pavantej-VivoBook-ASUSLaptop-X509FA-X509FA[00m:[01;34m~/acp2026/level1[00m$ gdb demo6
+[?2004l[35;1mGNU gdb (Ubuntu 15.1-1ubuntu1~24.04.1) 15.1[m
+Copyright (C) 2024 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <[32mhttp://gnu.org/licenses/gpl.html[m>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+[32m<https://www.gnu.org/software/gdb/bugs/>[m.
+Find the GDB manual and other documentation resources online at:
+    <[32mhttp://www.gnu.org/software/gdb/documentation/[m>.
+
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from [32mdemo6[m...
+[?2004h(gdb) b main
+[?2004lBreakpoint 1 at [34m0x1215[m: file [32mdemo6.c[m, line 17.
+[?2004h(gdb) r
+[?2004lStarting program: [32m/home/pavantej/acp2026/level1/demo6[m 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "[32m/lib/x86_64-linux-gnu/libthread_db.so.1[m".
+
+Breakpoint 1, [33mmain[m () at [32mdemo6.c[m:17
+17	[32mint[m [01mmain[m[31m()[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l19	    [01mprintf[m[31m([m[31m"Enter number of elements of the array: "[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l20	    [01mscanf[m[31m([m[31m"%d"[m[31m,&[mn[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lEnter number of elements of the array: 5
+21	    [01;34mif[m[31m([mn[31m<=[m[35m0[m[31m)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l25	    [32mint[m [31m*[ma[31m=[m[01mcreate_array[m[31m([mn[31m);[m
+[?2004h[?2004l[?2004h(gdb) s
+[?2004l[33mcreate_array[m ([36mn[m=5) at [32mdemo6.c[m:32
+32	    [32mint[m [31m*[mx[31m=[m[01mmalloc[m[31m([mn[31m*[m[01;34msizeof[m[31m([m[32mint[m[31m));[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l33	    [01;34mif[m[31m([mx[31m==[mNULL[31m)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l37	    [01;34mreturn[m x[31m;[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l38	[31m}[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l[33mmain[m () at [32mdemo6.c[m:26
+26	    [01minitialize_array[m[31m([ma[31m,[mn[31m);[m
+[?2004h[?2004l[?2004h(gdb) s
+[?2004l[33minitialize_array[m ([36ma[m=0x555555559ac0, [36mn[m=5) at [32mdemo6.c[m:40
+40	    [01;34mfor[m[31m([m[32mint[m i[31m=[m[35m0[m[31m;[mi[31m<[mn[31m;[mi[31m++)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l41	        [01mprintf[m[31m([m[31m"Enter element %d of the array: "[m[31m,[mi[31m+[m[35m1[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l42	        [01mscanf[m[31m([m[31m"%d"[m[31m,([ma[31m+[mi[31m));[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lEnter element 1 of the array: 1 2
+40	    [01;34mfor[m[31m([m[32mint[m i[31m=[m[35m0[m[31m;[mi[31m<[mn[31m;[mi[31m++)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) p a[i]
+[?2004l[36m$1[m = 2
+[?2004h(gdb) n
+[?2004l41	        [01mprintf[m[31m([m[31m"Enter element %d of the array: "[m[31m,[mi[31m+[m[35m1[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l42	        [01mscanf[m[31m([m[31m"%d"[m[31m,([ma[31m+[mi[31m));[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lEnter element 2 of the array: 5
+40	    [01;34mfor[m[31m([m[32mint[m i[31m=[m[35m0[m[31m;[mi[31m<[mn[31m;[mi[31m++)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) p a[i]
+[?2004l[36m$2[m = 5
+[?2004h(gdb) n
+[?2004l41	        [01mprintf[m[31m([m[31m"Enter element %d of the array: "[m[31m,[mi[31m+[m[35m1[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l42	        [01mscanf[m[31m([m[31m"%d"[m[31m,([ma[31m+[mi[31m));[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lEnter element 3 of the array: 3
+40	    [01;34mfor[m[31m([m[32mint[m i[31m=[m[35m0[m[31m;[mi[31m<[mn[31m;[mi[31m++)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) p a[i]
+[?2004l[36m$3[m = 3
+[?2004h(gdb) n
+[?2004l41	        [01mprintf[m[31m([m[31m"Enter element %d of the array: "[m[31m,[mi[31m+[m[35m1[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l42	        [01mscanf[m[31m([m[31m"%d"[m[31m,([ma[31m+[mi[31m));[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lEnter element 4 of the array: 6
+40	    [01;34mfor[m[31m([m[32mint[m i[31m=[m[35m0[m[31m;[mi[31m<[mn[31m;[mi[31m++)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) p a[i]
+[?2004l[36m$4[m = 6
+[?2004h(gdb) n
+[?2004l41	        [01mprintf[m[31m([m[31m"Enter element %d of the array: "[m[31m,[mi[31m+[m[35m1[m[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l42	        [01mscanf[m[31m([m[31m"%d"[m[31m,([ma[31m+[mi[31m));[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lEnter element 5 of the array: 4
+40	    [01;34mfor[m[31m([m[32mint[m i[31m=[m[35m0[m[31m;[mi[31m<[mn[31m;[mi[31m++)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) p a[i]
+[?2004l[36m$5[m = 4
+[?2004h(gdb) n
+[?2004l44	[31m}[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l[33mmain[m () at [32mdemo6.c[m:27
+27	    [01mprint_array[m[31m([ma[31m,[mn[31m);[m
+[?2004h[?2004l[?2004h(gdb) s
+[?2004l[33mprint_array[m ([36ma[m=0x555555559ac0, [36mn[m=5) at [32mdemo6.c[m:46
+46	    [01;34mfor[m[31m([m[32mint[m i[31m=[m[35m0[m[31m;[mi[31m<[mn[31m;[mi[31m++)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l47	        [01mprintf[m[31m([m[31m"Element %d: %d[m[35m\n[m[31m"[m[31m,[mi[31m+[m[35m1[m[31m,*([ma[31m+[mi[31m));[m
+[?2004h[?2004l[?2004h(gdb) p a[i]
+[?2004l[36m$6[m = 2
+[?2004h(gdb) n
+[?2004lElement 1: 2
+46	    [01;34mfor[m[31m([m[32mint[m i[31m=[m[35m0[m[31m;[mi[31m<[mn[31m;[mi[31m++)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l47	        [01mprintf[m[31m([m[31m"Element %d: %d[m[35m\n[m[31m"[m[31m,[mi[31m+[m[35m1[m[31m,*([ma[31m+[mi[31m));[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lElement 2: 5
+46	    [01;34mfor[m[31m([m[32mint[m i[31m=[m[35m0[m[31m;[mi[31m<[mn[31m;[mi[31m++)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) p a[i]
+[?2004l[36m$7[m = 5
+[?2004h(gdb) n
+[?2004l47	        [01mprintf[m[31m([m[31m"Element %d: %d[m[35m\n[m[31m"[m[31m,[mi[31m+[m[35m1[m[31m,*([ma[31m+[mi[31m));[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lElement 3: 3
+46	    [01;34mfor[m[31m([m[32mint[m i[31m=[m[35m0[m[31m;[mi[31m<[mn[31m;[mi[31m++)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l47	        [01mprintf[m[31m([m[31m"Element %d: %d[m[35m\n[m[31m"[m[31m,[mi[31m+[m[35m1[m[31m,*([ma[31m+[mi[31m));[m
+[?2004h[?2004l[?2004h(gdb) np a[i]
+[?2004l[36m$8[m = 6
+[?2004h(gdb) p a[i]n[K
+[?2004lElement 4: 6
+46	    [01;34mfor[m[31m([m[32mint[m i[31m=[m[35m0[m[31m;[mi[31m<[mn[31m;[mi[31m++)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) np a[i]n[Kp a[i]
+[?2004l[36m$9[m = 6
+[?2004h(gdb) n
+[?2004l47	        [01mprintf[m[31m([m[31m"Element %d: %d[m[35m\n[m[31m"[m[31m,[mi[31m+[m[35m1[m[31m,*([ma[31m+[mi[31m));[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004lElement 5: 4
+46	    [01;34mfor[m[31m([m[32mint[m i[31m=[m[35m0[m[31m;[mi[31m<[mn[31m;[mi[31m++)[m[31m{[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l49	[31m}[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l[33mmain[m () at [32mdemo6.c[m:28
+28	    [01mdelete_array[m[31m(&[ma[31m);[m
+[?2004h[?2004l[?2004h(gdb) s
+[?2004l[33mdelete_array[m ([36ma[m=0x7fffffffd890) at [32mdemo6.c[m:51
+51	    [01mfree[m[31m(*[ma[31m);[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l52	    [31m*[ma[31m=[mNULL[31m;[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l53	[31m}[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l[33mmain[m () at [32mdemo6.c[m:29
+29	    [01;34mreturn[m [35m0[m[31m;[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l30	[31m}[m
+[?2004h[?2004l[?2004h(gdb) n
+[?2004l[33m__libc_start_call_main[m ([36mmain=main@entry[m=0x555555555209 <main>, [36margc=argc@entry[m=1, [36margv=argv@entry[m=0x7fffffffd9c8)
+    at [32m../sysdeps/nptl/libc_start_call_main.h[m:74
+warning: 74	[32m../sysdeps/nptl/libc_start_call_main.h[m: No such file or directory
+[?2004h[?2004l[?2004h(gdb) q
+[?2004l[?2004hA debugging session is active.
+
+	Inferior 1 [process 20231] will be killed.
+
+Quit anyway? (y or n) y
+[?2004l[?2004h]0;pavantej@pavantej-VivoBook-ASUSLaptop-X509FA-X509FA: ~/acp2026/level1[01;32mpavantej@pavantej-VivoBook-ASUSLaptop-X509FA-X509FA[00m:[01;34m~/acp2026/level1[00m$ exit
+[?2004lexit
+
+Script done on 2026-04-02 15:42:18+05:30 [COMMAND_EXIT_CODE="0"]
